@@ -3,9 +3,6 @@ $(function() {
   // begin SVG for IE
   require('./modules/svg4everybody')();
 
-  // begin no-JS
-  require('./modules/noJs')();
-
   // begin Scroll2Ancor
   // require('./modules/scroll2ancor')();
 
@@ -14,6 +11,9 @@ $(function() {
 
   // begin Popup
   // require('./modules/popup')();
+
+  // begin header
+  require('./modules/header')();
 
   // begin Sticky header
   // require('./modules/stickyHeader')();

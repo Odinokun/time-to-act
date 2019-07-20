@@ -1,0 +1,154 @@
+.header {
+  background-color: $highlight-y;
+  .container {
+    padding-top: 13px;
+    padding-bottom: 13px;
+  }
+}
+
+.header-inn {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  @include max(768) {
+    justify-content: flex-start;
+  }
+  @include max(740) {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.header-inn__left {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-right: 40px;
+
+  @include max(768) {
+    padding-right: 20px;
+  }
+  @include max(740) {
+    flex-direction: column;
+    padding-right: 0;
+    .header__phone {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.header-inn__right {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  @include max(740) {
+    display: none;
+    padding-top: 14px;
+    padding-bottom: 10px;
+  }
+}
+
+.header__arrow {
+  position: absolute;
+  top: 3px;
+  right: -34px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+
+  @include max(740) {
+    display: flex;
+  }
+  &.active {
+    .header__arrow-btn {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.header__arrow-btn {
+  width: 10px;
+  height: 4px;
+  transition: transform .5s;
+  border-top: 4px solid $text;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+
+  will-change: transform;
+}
+
+.header__phone-svg {
+  width: 15px;
+  height: 15px;
+  margin-right: 23px;
+
+  @include max(740) {
+    position: absolute;
+    top: 2px;
+    left: -30px;
+  }
+  svg {
+    fill: $text;
+    width: 15px;
+    height: 15px;
+  }
+}
+
+.header__phone {
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+  display: block;
+  margin-right: 40px;
+  white-space: nowrap;
+  color: $text;
+
+  @include max(768) {
+    margin-right: 20px;
+  }
+  @include max(740) {
+    margin-right: 0;
+    margin-bottom: 14px;
+  }
+  &::before {
+    position: absolute;
+    right: 0;
+    bottom: -1px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    content: '';
+    transition: width .5s;
+    background-color: $text;
+  }
+  &:hover {
+    text-decoration: none;
+    &::before {
+      width: 100%;
+    }
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.header-btn {
+  font-size: 12px;
+  line-height: 28px;
+  height: 28px;
+  padding: 0 15px;
+  border-width: 1px;
+
+  @include max(768) {
+    margin-left: 20px;
+  }
+  @include max(740) {
+    margin-left: 0;
+    padding: 0 10px;
+  }
+}

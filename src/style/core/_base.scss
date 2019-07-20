@@ -191,21 +191,87 @@ ol > *:not(li) {
   font-family: 'Roboto Medium', sans-serif;
   font-size: 16px;
   line-height: 46px;
+  position: relative;
   display: inline-block;
+  overflow: hidden;
   height: 46px;
   padding: 0 33px;
   cursor: pointer;
-  transition: box-shadow .5s;
+  transition: .5s;
+  text-decoration: none;
   text-transform: uppercase;
   color: $text;
-  border: 2px solid $highlight-y;
   border-radius: 25px !important;
-  background-color: $highlight-y;
-  box-shadow: 0 6px 8px rgba(255, 193, 7, 0);
+  background-color: transparent;
+
+  input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+  }
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    content: '';
+  }
+
+  &:after {
+    position: absolute;
+    z-index: 1;
+    right: -15%;
+    bottom: 0;
+    left: auto;
+    width: 0;
+    height: 100%;
+    content: '';
+    transition: .5s;
+    transform: skewX(25deg);
+  }
   &:hover {
+    cursor: pointer;
     text-decoration: none;
     color: $text;
-    box-shadow: 0 6px 8px rgba(255, 193, 7, .4);
+    &:after {
+      left: -25%;
+      width: 135%;
+      transition: .5s;
+      transform: skewX(25deg);
+    }
+  }
+  span {
+    position: relative;
+    z-index: 2;
+    white-space: nowrap;
+  }
+}
+
+.btn--highlight {
+  border: 2px solid $highlight-y;
+
+  &::before {
+    background-color: $highlight-y;
+  }
+  &::after {
+    background-color: #fff;
+  }
+}
+
+.btn--white {
+  border: 2px solid #fff;
+
+  &::before {
+    background-color: #fff;
+  }
+  &::after {
+    background-color: $highlight-y;
   }
 }
 

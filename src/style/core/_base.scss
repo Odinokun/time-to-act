@@ -36,48 +36,42 @@ p {
 }
 
 h1 {
-  font-family: $font-bold;
   font-size: 36px;
 }
 
 h2 {
-  font-family: $font-bold;
   font-size: 32px;
 }
 
 h3 {
-  font-family: $font-bold;
   font-size: 28px;
 }
 
 h4 {
-  font-family: $font-bold;
   font-size: 24px;
 }
 
 h5 {
-  font-family: $font-bold;
   font-size: 22px;
 }
 
 h6 {
-  font-family: $font-bold;
   font-size: 20px;
 }
 
 p {
   font-size: 16px;
   strong {
-    font-family: $font-bold;
+    font-weight: 500;
   }
 }
 
 a {
   transition: color .5s;
-  color: $highlight;
+  text-decoration: none;
+  color: $link;
   &:hover {
-    text-decoration: none;
-    color: $highlight-hov;
+    text-decoration: underline;
   }
 }
 
@@ -168,48 +162,62 @@ ol > *:not(li) {
   flex-direction: column;
   height: 100%;
   min-height: 100vh;
-
   //свойство для плавной прокрутки на яблоках
 
   -webkit-overflow-scrolling: touch;
-  &.no-scroll {
-    overflow: hidden;
-  }
 }
 
 .main {
   flex-grow: 1;
 }
 
-.container {
+.container,
+.container-lg {
   position: relative;
   width: 100%;
-  max-width: 1200px;
   margin: 0 auto;
-  padding: 15px 30px;
+  padding: 0 27px;
+}
 
-  @include max(768) {
-    padding: 10px 20px;
+.container {
+  max-width: 946px;
+}
+
+.container-lg {
+  max-width: 1006px;
+}
+
+.btn {
+  font-family: 'Roboto Medium', sans-serif;
+  font-size: 16px;
+  line-height: 46px;
+  display: inline-block;
+  height: 46px;
+  padding: 0 33px;
+  cursor: pointer;
+  transition: box-shadow .5s;
+  text-transform: uppercase;
+  color: $text;
+  border: 2px solid $highlight-y;
+  border-radius: 25px !important;
+  background-color: $highlight-y;
+  box-shadow: 0 6px 8px rgba(255, 193, 7, 0);
+  &:hover {
+    text-decoration: none;
+    color: $text;
+    box-shadow: 0 6px 8px rgba(255, 193, 7, .4);
   }
+}
 
-  @include max(425) {
-    padding: 10px;
+//begin ************TEMP SVG STYLE******************
+.svg-1 {
+  svg {
+    fill: transparent;
+    width: 150px;
+    height: 150px;
+
+    stroke: #396;
   }
 }
 
-// скрываем все слайды кроме первого
-// при отключенном JS
-// .slick-slide исправить на текущий класс
-.no-js .slick-slide:not(:first-child) {
-  display: none;
-}
-
-// скрываем слайдер до его инициализации
-// .card-slider-lg__list исправить на текущий класс
-.card-slider-lg__list {
-  visibility: hidden;
-}
-
-.card-slider-lg__list.slick-initialized {
-  visibility: visible;
-}
+//end ************TEMP SVG STYLE******************

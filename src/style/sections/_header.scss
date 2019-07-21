@@ -1,4 +1,8 @@
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   background-color: $highlight-y;
   .container {
     padding-top: 13px;

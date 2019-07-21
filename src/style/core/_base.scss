@@ -184,11 +184,18 @@ ol > *:not(li) {
 }
 
 .container {
-  max-width: 946px;
+  max-width: 1000px;
+  @include max(1024) {
+    max-width: 768px;
+    padding: 0 72px;
+  }
+  @include max(740) {
+    padding: 0 10px;
+  }
 }
 
 .container-lg {
-  max-width: 1006px;
+  max-width: 1060px;
 }
 
 .btn {

@@ -1,0 +1,21 @@
+extends ../_template
+
+block variables
+  - var title       = 'Article | Time to act'
+  - var description = 'Article | Time to act'
+  - var ogtitle     = 'Article | Time to act'
+  - var ogimage     = 'assets/img/social.jpg'
+
+block content
+  #main-wrap.main-wrap.no-scroll
+    include ../sections/header
+
+    //begin content
+    .main.main-article
+      include ../sections/article-top
+
+
+
+    //end content
+
+    include ../sections/footer

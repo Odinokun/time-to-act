@@ -12,11 +12,11 @@ $(function() {
   // begin Popup
   // require('./modules/popup')();
 
+  // begin preloader
+  require('./modules/preloader')();
+
   // begin header
   require('./modules/header')();
-
-  // begin Sticky header
-  // require('./modules/stickyHeader')();
 
   // begin Animate.css
   // require('./modules/waypoints')();

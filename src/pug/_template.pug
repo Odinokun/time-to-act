@@ -22,12 +22,15 @@ html(lang="ru")
 
     // begin favicon block start
     link(rel='shortcut icon'    type='image/x-icon' href='assets/img/favicon/favicon.png')
-    link(rel='apple-touch-icon' sizes='180x180'     href='img/favicon/apple-touch-icon-180x180.png')
+    //link(rel='apple-touch-icon' sizes='180x180'     href='img/favicon/apple-touch-icon-180x180.png')
     // end favicon block end
 
     // begin fonts
     link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic-ext")
     // end fonts
+
+    style.
+      .preloader-wrap{position:fixed;z-index:1;top:0;right:0;bottom:0;left:0;display:flex;justify-content:center;align-items:center;height:100%;margin:auto;background-color:#2196f3}.preloader-wrap svg{fill:#fff;width:130px;height:130px}.preloader{position:relative}.preloader::before{position:absolute;top:0;right:0;bottom:0;left:0;width:16px;height:130px;margin:auto;content:'';animation:preloader 8s infinite steps(1);border-radius:5px;background-image:linear-gradient(#ffc107 0,#ffc107 50%,transparent 51%,transparent 100%)}.preloader .circle{fill:#ffc107}.preloader .path-01{animation:path-01 8s infinite steps(1)}.preloader .path-02{animation:path-02 8s infinite steps(1)}.preloader .path-03{animation:path-03 8s infinite steps(1)}.preloader .path-04{animation:path-04 8s infinite steps(1)}.preloader .path-05{animation:path-05 8s infinite steps(1)}.preloader .path-06{animation:path-06 8s infinite steps(1)}.preloader .path-07{animation:path-07 8s infinite steps(1)}.preloader .path-08{animation:path-08 8s infinite steps(1)}@keyframes preloader{0%{transform:rotate(0)}12.5%{transform:rotate(45deg)}25%{transform:rotate(90deg)}37.5%{transform:rotate(135deg)}50%{transform:rotate(180deg)}62.5%{transform:rotate(225deg)}75%{transform:rotate(270deg)}87.5%{transform:rotate(315deg)}100%{transform:rotate(360deg)}}@keyframes path-01{0%{fill:#ffc107}12.5%{fill:#fff}87.5%{fill:#ffc107}}@keyframes path-02{0%{fill:#ffc107}25%{fill:#fff}}@keyframes path-03{12.5%{fill:#ffc107}37.5%{fill:#fff}}@keyframes path-04{25%{fill:#ffc107}50%{fill:#fff}}@keyframes path-05{37.5%{fill:#ffc107}62.5%{fill:#fff}}@keyframes path-06{50%{fill:#ffc107}75%{fill:#fff}}@keyframes path-07{62.5%{fill:#ffc107}87.5%{fill:#fff}}@keyframes path-08{75%{fill:#ffc107}100%{fill:#fff}}
 
     link(rel='stylesheet' href='assets/css/foundation.css')
     link(rel='stylesheet' href='assets/css/app.css')
@@ -40,8 +43,10 @@ html(lang="ru")
     //[if lt IE 9]><script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]
 
   body
+
     block content
 
+    include elements/preloader
 
     script(src='assets/js/foundation.js')
     script(src='assets/js/app.js')

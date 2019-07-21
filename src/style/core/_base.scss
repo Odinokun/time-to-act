@@ -165,9 +165,13 @@ ol > *:not(li) {
   //свойство для плавной прокрутки на яблоках
 
   -webkit-overflow-scrolling: touch;
+  &.no-scroll{
+    overflow: hidden;
+  }
 }
 
 .main {
+  min-height: 800vh;
   flex-grow: 1;
 }
 

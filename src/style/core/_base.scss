@@ -152,9 +152,9 @@ ol > *:not(li) {
 
 //изменяем цвет выделения текста мышью
 ::selection {
-  // background-color: $brand;
-  // color: $brand;
-  // text-shadow: none;
+  color: $brand;
+  background-color: $highlight-y;
+  text-shadow: none;
 }
 
 .main-wrap {
@@ -162,17 +162,18 @@ ol > *:not(li) {
   flex-direction: column;
   height: 100%;
   min-height: 100vh;
+
   //свойство для плавной прокрутки на яблоках
 
   -webkit-overflow-scrolling: touch;
-  &.no-scroll{
+  &.no-scroll {
     overflow: hidden;
   }
 }
 
 .main {
-  min-height: 800vh;
   flex-grow: 1;
+  min-height: 800vh;
 }
 
 .container,
@@ -185,10 +186,12 @@ ol > *:not(li) {
 
 .container {
   max-width: 1000px;
+
   @include max(1024) {
     max-width: 768px;
     padding: 0 72px;
   }
+
   @include max(740) {
     padding: 0 10px;
   }

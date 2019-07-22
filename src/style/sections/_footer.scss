@@ -1,18 +1,6 @@
 .footer {
   background-color: #212121;
 
-  @include max(1024) {
-    .language {
-      position: absolute;
-      top: 28px;
-      right: 0;
-
-      @include max(740) {
-        top: -2px;
-        right: -30px;
-      }
-    }
-  }
   .container {
     display: flex;
     align-items: flex-start;
@@ -222,6 +210,34 @@
 }
 
 //end footer menu
+//begin footer__language
+
+.footer__language {
+  position: relative;
+  width: 48px;
+  height: 22px;
+  margin: 0 5px 0 30px;
+
+  @include max(1024) {
+    position: absolute;
+    top: 28px;
+    right: 0;
+    margin-right: 0;
+  }
+  @include max(740) {
+    top: -6px;
+    right: -40px;
+  }
+  .language {
+    position: absolute;
+    top: 0;
+    right: 0;
+    pointer-events: auto;
+    opacity: 1;
+  }
+}
+
+//end footer__language
 
 //begin footer__right-phones
 .footer__right-phones {
@@ -240,6 +256,7 @@
     padding-right: 25px;
     padding-left: 25px;
   }
+
   .btn {
     font-size: 12px;
     line-height: 28px;
@@ -301,6 +318,7 @@
     align-items: center;
     margin: 20px 0 40px 0;
   }
+
   .btn {
     font-size: 12px;
     line-height: 28px;
@@ -328,6 +346,7 @@
   @include max(740) {
     padding-left: 0;
   }
+
   span {
     font-size: 16px;
     font-weight: 400;
@@ -351,6 +370,7 @@
   @include max(740) {
     display: none;
   }
+
   svg {
     fill: #fff;
     width: 11px;
@@ -367,6 +387,7 @@
   @include max(740) {
     display: none;
   }
+
   svg {
     fill: #fff;
     width: 17px;
@@ -374,4 +395,5 @@
     opacity: .7;
   }
 }
+
 //end footer__right-contacts

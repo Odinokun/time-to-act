@@ -10,6 +10,7 @@
     right: 2px;
     margin-right: 0;
   }
+
   @include max(640) {
     position: relative;
     top: 0;

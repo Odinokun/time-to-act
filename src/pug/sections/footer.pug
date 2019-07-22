@@ -1,0 +1,81 @@
+//begin footer
+footer.footer
+  .container
+    //begin footer__left
+    .footer__left
+      a(href="#").footer__logo
+        img(src="assets/img/logo-lg.svg" alt="logo")
+      //begin footer__socials
+      .footer__socials
+        a(href="#" target="_blank" rel="nofollow noopener noreferrer").footer__social.footer__social--fb
+          +svg('fb')
+        a(href="#" target="_blank" rel="nofollow noopener noreferrer").footer__social.footer__social--youtube
+          +svg('youtube')
+        a(href="#" target="_blank" rel="nofollow noopener noreferrer").footer__social.footer__social--inst
+          +svg('inst')
+        a(href="#" target="_blank" rel="nofollow noopener noreferrer").footer__social.footer__social--in
+          +svg('in')
+      //end footer__socials
+
+      .footer__copyright
+        .footer__copyright-icon
+          span &#169;
+        .footer__copyright-text
+          span Time-To-Act 2009 - 2019.
+          span Все права защищены
+    //end footer__left
+
+    //begin footer__right
+    .footer__right
+      //begin footer__right-top
+      .footer__right-top
+        //begin footer__menu
+        .footer__menu
+          ul.footer__menu-list
+            li.footer__menu-item
+              a(href="#").footer__menu-link Главная
+            li.footer__menu-item
+              a(href="#").footer__menu-link Вакансии
+            li.footer__menu-item
+              a(href="#").footer__menu-link Услуги
+            li.footer__menu-item
+              a(href="#").footer__menu-link.active Статьи
+            li.footer__menu-item
+              a(href="#").footer__menu-link Контакты
+        //end footer__menu
+
+        include ../elements/language
+      //end footer__right-top
+
+      //begin footer__right-phones
+      .footer__right-phones
+        .footer__right-phones-svg
+          +svg('phone')
+        a(href="tel:+380995552020").footer__right-phone +38 099 555 20 20
+        a(href="tel:+380985552020").footer__right-phone +38 098 555 20 20
+        a(href="tel:+380735552020").footer__right-phone +38 073 555 20 20
+        a(href="#").btn.btn--highlight
+          span Обратный звонок
+      //end footer__right-phones
+
+      //begin footer__right-contacts
+      .footer__right-contacts
+        a(href="#" target="_blank" rel="nofollow noopener noreferrer").footer__right-adress
+          .footer__right-adress-svg
+            +svg('marker')
+          span.footer__right-adress-text ул. Вышгородская 12
+          span.footer__right-adress-text Украина, Киев, 04074
+        a(href="mailto:timetoact.ua@gmail.com").footer__right-mail
+          .footer__right-mail-svg
+            +svg('mail')
+          span.footer__right-mail-text timetoact.ua@gmail.com
+        a(href="#").btn.btn--black
+          span Напишите нам
+      //end footer__right-contacts
+
+
+    //end footer__right
+
+
+
+//end footer

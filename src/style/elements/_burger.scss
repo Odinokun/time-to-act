@@ -6,7 +6,7 @@
   height: 23px;
   cursor: pointer;
 
-  @include max(600) {
+  @include max(640) {
     display: block;
   }
   &.active {

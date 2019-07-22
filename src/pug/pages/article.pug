@@ -13,8 +13,65 @@ block content
     //begin content
     .main.main-article
       include ../sections/article-top
+      
+      .article-pic#article-pic
+        img(src="assets/img/article.jpg" alt="picture")
+        .article-pic__mask
+          .article-pic__mask-left
+          .article-pic__mask-middle
+          .article-pic__mask-right
+
+      .container
+        .article-text-wrap#article-text-wrap
+          .article-text
+            p Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+            p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+
+          h3.article-title Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+
+          .article-text
+            p Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+            p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+            p Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+
+          h3.article-title Стиль нумерованного списка
+
+          ol
+            li Lorem ipsum dolor sit amet, cons ectetuer
+            li Adipiscing elit, sed diam nonummy nibh euismod
+            li Tincidunt ut laoreet dolore magna aliquam erat volutpat
+            li Ut wisi enim ad minim veniam, quis nostrud exerci
+            li Tation ullamcorper suscipit lobortis
+            li Nisl ut aliquip ex ea commodo consequat.
+
+          h3.article-title Стиль булетированного списка
+
+          ul.custom-ul
+            li Lorem ipsum dolor sit amet, cons ectetuer
+            li Adipiscing elit, sed diam nonummy nibh euismod
+            li Tincidunt ut laoreet dolore magna aliquam erat volutpat
+            li Ut wisi enim ad minim veniam, quis nostrud exerci
+            li Tation ullamcorper suscipit lobortis
+            li Nisl ut aliquip ex ea commodo consequat.
+
+          h3.article-title Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+
+          .article-text
+            p Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+            p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
 
 
+
+
+        .article-bottom#article-bottom
+          a(href="#").article-bottom__prev
+            +svg('arr-prev')
+            span Предыдущая
+          a(href="#").article-bottom__social.article-bottom__social--fb
+            +svg('fb')
+          a(href="#").article-bottom__next
+            span Следующая
+            +svg('arr-next')
 
     //end content
 

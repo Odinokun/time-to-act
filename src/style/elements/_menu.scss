@@ -5,9 +5,9 @@
   @include max(1024) {
     margin-top: 0;
   }
-  @include max(600) {
+  @include max(640) {
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     top: 0;
     right: 0;
     bottom: 0;
@@ -35,7 +35,7 @@
   margin: 0;
   padding: 0;
 
-  @include max(600) {
+  @include max(640) {
     flex-direction: column;
   }
 }
@@ -47,7 +47,7 @@
   @include max(1024) {
     padding: 0 0 0 26px;
   }
-  @include max(600) {
+  @include max(640) {
     padding-left: 0;
   }
 }
@@ -60,7 +60,7 @@
   padding-bottom: 8px;
   color: #fff;
 
-  @include max(600) {
+  @include max(640) {
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 15px;
@@ -94,7 +94,7 @@
   padding: 0 12px;
   border-width: 1px;
 
-  @include max(600) {
+  @include max(640) {
     display: block;
   }
 }
@@ -104,7 +104,7 @@
   align-items: center;
   margin-top: auto;
 
-  @include max(600) {
+  @include max(640) {
     display: flex;
   }
 }

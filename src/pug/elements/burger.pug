@@ -1,7 +1,7 @@
 //begin burger
 .burger#burger
-  input#burger__input(name='exit' type='checkbox')
-  label(for='burger__input')
-    span.burger__icon
-    span.burger__menu Menu
+  .burger-btn.burger-btn--base
+    +svg('burger')
+  .burger-btn.burger-btn--active
+    +svg('burger-open')
 //end burger

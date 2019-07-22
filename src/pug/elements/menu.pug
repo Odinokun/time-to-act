@@ -1,0 +1,30 @@
+//begin menu
+nav.menu#menu
+  ul.menu__list
+    li.menu__item
+      a(href="#").menu__link Главная
+    li.menu__item
+      a(href="#").menu__link Вакансии
+    li.menu__item
+      a(href="#").menu__link Услуги
+    li.menu__item
+      a(href="#").menu__link.active Статьи
+    li.menu__item
+      a(href="#").menu__link Контакты
+
+  button.btn.btn--white.menu-btn
+    span Обратный звонок
+
+  //begin menu-socials
+  .menu-socials
+    a(href="#" target="_blank" rel="nofollow noopener noreferrer").menu-social.menu-social--fb
+      +svg('fb')
+    a(href="#" target="_blank" rel="nofollow noopener noreferrer").menu-social.menu-social--youtube
+      +svg('youtube')
+    a(href="#" target="_blank" rel="nofollow noopener noreferrer").menu-social.menu-social--inst
+      +svg('inst')
+    a(href="#" target="_blank" rel="nofollow noopener noreferrer").menu-social.menu-social--in
+      +svg('in')
+  //end menu-socials
+
+//end menu

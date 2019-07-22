@@ -3,8 +3,20 @@ $(function() {
   // begin SVG for IE
   require('./modules/svg4everybody')();
 
-  // begin Scroll2Ancor
-  // require('./modules/scroll2ancor')();
+  // begin language
+  require('./modules/language')();
+
+  // begin menu
+  require('./modules/menu')();
+
+  // begin bottom line
+  require('./modules/bottom-line')();
+
+  // begin article pic
+  require('./modules/article-pic')();
+
+  // begin link position
+  require('./modules/link-position')();
 
   // begin Slick slider
   // require('./modules/slick')();

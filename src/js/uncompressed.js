@@ -2,7 +2,8 @@
 // should be deleted before production
 $(document).ready(function ($) {
   pageWidget([
-    'index'
+    'index',
+    'article'
     ]);
 });
 function pageWidget(pages) {

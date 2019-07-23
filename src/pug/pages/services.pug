@@ -1,0 +1,65 @@
+extends ../_template
+
+mixin services-item(title, price)
+  .services__item
+    h3.services__item-title #{title}
+    .services__item-price
+      span #{price}
+
+block variables
+  - var title       = 'Article | Time to act'
+  - var description = 'Article | Time to act'
+  - var ogtitle     = 'Article | Time to act'
+  - var ogimage     = 'assets/img/social.jpg'
+
+block content
+  #main-wrap.main-wrap
+    include ../sections/header
+
+    //begin content
+    .main.main-services
+      include ../sections/services-top
+      //begin services
+      .services
+        .container
+          .services__aside-title
+            img(src="assets/img/services.png" alt="picture")
+          //begin services__left
+          .services__left
+            +services-item('Страховка для выезда на работу по биометрике, без виз на три месяца, с годовым коридором', '350 грн.')
+            +services-item('Страховка  для полугодовой рабочей визы', '800 грн.')
+            +services-item('Страховка для годовой рабочей визы', '1200 грн.')
+            +services-item('Полугодовая рабочая виза (пакет документов)', '3600 грн.')
+            +services-item('Годовая рабочая виза (пакет документов)', '6000 грн.')
+
+          //end services__left
+
+          //begin services__right
+          .services__right
+            .services__form
+              form
+                h3.services__form-title
+                  |Хотите работать
+                  br
+                  |в Европе?
+                span.services__form-text Заполните контакты и получите консультацию абсолютно бесплатно!
+                input(name='name' placeholder='Ваше имя').services__form-input
+                input(name='phone' placeholder='Ваш телефон').services__form-input
+                .btn.btn--highlight
+                  input(type='submit' value='отправить сообщение')
+                  span отправить сообщение
+
+            .services__ahtung
+              span.services__ahtung-text В связи с нестабильным курсом гривны, цена может незначительно меняться (уточняйте у менеджера).
+
+            .services__promise
+              h3.services__promise-title Наша компания всегда окажет Вам помощь для трудоустройства в Европе.
+              p В данном разделе мы предлагаем Вам спектр услуг по оформлению документов, необходимых для легального трудоустройства.
+              p Окажем содействие в получении полугодовой и годовой (Воеводской) визы. Оформим страховой полис, для трудоустройства в Европе по без визу, а так-же, для получения виз.
+          //end services__right
+
+      //end services
+      
+    //end content
+
+    include ../sections/footer

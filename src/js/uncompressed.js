@@ -3,7 +3,8 @@
 $(document).ready(function ($) {
   pageWidget([
     'index',
-    'article'
+    'article',
+    'services'
     ]);
 });
 function pageWidget(pages) {

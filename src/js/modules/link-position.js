@@ -12,8 +12,10 @@ module.exports = function () {
     $(link).css('top', res);
   }
 
-  $(window).on('resize', linkPosition);
-  $(document).ready(linkPosition);
+  if ($('#article-top__all-articles').length) {
+    $(window).on('resize', linkPosition);
+    $(document).ready(linkPosition);
+  }
 
   //end link position
 

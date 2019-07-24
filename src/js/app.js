@@ -31,8 +31,9 @@ $(function() {
   require('./modules/header')();
 
   // begin Animate.css
-  // require('./modules/waypoints')();
-  // require('./modules/animateCss')();
+  //РАБОТАЕТ ТОЛЬКО С JQUERY < 3.0.0 !!!!!!!!!!!!!!!!!!
+  require('./modules/waypoints')();
+  require('./modules/animateCss')();
 
   // begin Fancybox3
   // require('./modules/fancybox')();

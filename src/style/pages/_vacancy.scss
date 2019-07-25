@@ -1,0 +1,122 @@
+.vacancy {
+  .container {
+    display: flex;
+    align-items: flex-start;
+
+    @include max(1024) {
+      flex-direction: column;
+    }
+  }
+}
+
+.vacancy-aside {
+  flex: none;
+  width: 272px;
+
+  @include max(1024) {
+    flex: auto;
+    width: 100%;
+  }
+}
+
+.vacancy-aside__vacancy {
+  position: relative;
+  z-index: 2;
+  transform: translateY(-30px);
+
+  @include max(1024) {
+    margin: 30px 0;
+    transform: translateY(0);
+  }
+  .btn {
+    width: 100%;
+  }
+}
+
+.vacancy-aside__vacancy-top {
+  overflow: hidden;
+  margin-bottom: 60px;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, .09);
+
+  @include max(1024) {
+    margin-bottom: 30px;
+  }
+}
+
+.vacancy-aside__vacancy-price {
+  padding: 8px;
+  text-align: center;
+  background-color: $highlight-r;
+  span {
+    font-size: 27px;
+    font-weight: 700;
+    color: #fff;
+  }
+}
+
+.vacancy-aside__vacancy-info-wrap {
+  padding: 30px 25px 20px 25px;
+}
+
+.vacancy-aside__vacancy-info {
+  display: flex;
+  margin-bottom: 25px;
+  span {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #878787;
+  }
+}
+
+.vacancy-aside__vacancy-svg {
+  width: 19px;
+  margin-right: 15px;
+  svg {
+    fill: #878787;
+    margin: 0 auto;
+  }
+}
+
+.vacancy-aside__vacancy-info--city {
+  svg {
+    width: 11px;
+    height: 17px;
+  }
+}
+
+.vacancy-aside__vacancy-info--gender {
+  svg {
+    width: 17px;
+    height: 17px;
+  }
+}
+
+.vacancy-aside__vacancy-info--job {
+  svg {
+    width: 19px;
+    height: 14px;
+  }
+}
+
+//begin vacancy-body
+.vacancy-body {
+  width: 100%;
+  max-width: 580px;
+  margin-left: 30px;
+  padding-top: 70px;
+  padding-left: 18px;
+
+  @include max(1024) {
+    max-width: 100%;
+    margin-left: 0;
+    padding: 0 0;
+  }
+  .article-bottom {
+    margin-top: 75px;
+  }
+}
+
+//end vacancy-body

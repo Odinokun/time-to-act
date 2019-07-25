@@ -1,0 +1,149 @@
+extends ../_template
+
+block variables
+  - var title       = 'Контакты | Time to act'
+  - var description = 'Контакты | Time to act'
+  - var ogtitle     = 'Контакты | Time to act'
+  - var ogimage     = 'assets/img/social.jpg'
+
+block content
+  #main-wrap.main-wrap
+    include ../sections/header
+
+    //begin content
+    .main.main-contacts
+      include ../sections/contacts-top
+
+      .contacts-map#contacts-map
+
+      //begin contacts-map-banner
+      .contacts-map-banner
+        .container
+          .contacts-map__banner
+            //contacts-map__banner-phones
+            .contacts-map__banner-phones
+              .contacts-map__banner-phones-svg
+                +svg('phone')
+              a(href="tel:+380995552020").contacts-map__banner-phone +38 099 555 20 20
+              a(href="tel:+380985552020").contacts-map__banner-phone +38 098 555 20 20
+              a(href="tel:+380735552020").contacts-map__banner-phone +38 073 555 20 20
+            //end contacts-map__banner-phones
+
+            //begin contacts-map__banner-adresses
+            .contacts-map__banner-adresses
+              a(href="https://goo.gl/maps/mFA8gs9S6cFeFWo18" target="_blank" rel="nofollow noopener noreferrer").contacts-map__banner-adress
+                .contacts-map__banner-adress-svg
+                  +svg('marker')
+                span.contacts-map__banner-adress-text ул. Вышгородская 12
+                span.contacts-map__banner-adress-text Украина, Киев, 04074
+            //end contacts-map__banner-adresses
+
+            //begin contacts-map__banner-mails
+            .contacts-map__banner-mails
+              a(href="mailto:timetoact.ua@gmail.com").contacts-map__banner-mail
+                .contacts-map__banner-mail-svg
+                  +svg('mail')
+                span.contacts-map__banner-text timetoact.ua@gmail.com
+              a(href="#" data-popup='popup-feedback').btn.btn--blue.popup-open
+                span Напишите нам
+            //end contacts-map__banner-mails
+      //end contacts-map-banner
+
+      //begin contacts-rows-wrap
+      .contacts-rows-wrap
+        //begin contacts-team
+        .contacts-team
+          .container
+            .contacts-hashtag
+              img(src="assets/img/our-team.png" alt="picture")
+            h2.contacts-team__title Наша команда
+            ul.contacts-team__list
+              //begin contacts-team__item
+              li.contacts-team__item
+                h3.contacts-team__name Павел
+                span.contacts-team__position Исполнительный директор
+                a(href="tel:+380931377849").contacts-team__phone 093 137 78 49
+                a(href="tel:+380502431572").contacts-team__phone 050 243 15 72
+              //end contacts-team__item
+              //begin contacts-team__item
+              li.contacts-team__item
+                h3.contacts-team__name Сергей
+                span.contacts-team__position Юрисконсульт
+                a(href="tel:+380992582776").contacts-team__phone 099 258 27 76
+                a(href="tel:+380939105477").contacts-team__phone 093 910 54 77
+              //end contacts-team__item
+              //begin contacts-team__item
+              li.contacts-team__item
+                h3.contacts-team__name Александр
+                span.contacts-team__position Менеджер
+                a(href="tel:+380631584768").contacts-team__phone 063 158 47 68
+                a(href="tel:+380970271354").contacts-team__phone 097 027 13 54
+              //end contacts-team__item
+              //begin contacts-team__item
+              li.contacts-team__item
+                h3.contacts-team__name Андрей
+                span.contacts-team__position Менеджер
+                a(href="tel:+380635644756").contacts-team__phone 063 564 47 56
+                a(href="tel:+380961365247").contacts-team__phone 096 136 52 47
+              //end contacts-team__item
+              //begin contacts-team__item
+              li.contacts-team__item
+                h3.contacts-team__name Егор
+                span.contacts-team__position Руководитель
+                a(href="tel:+380632251514").contacts-team__phone 063 225 15 14
+              //end contacts-team__item
+        //end begin contacts-team
+
+        //begin contacts-socials
+        .contacts-socials
+          .container
+            .contacts-hashtag
+              img(src="assets/img/socials.png" alt="picture")
+
+            h2.contacts-socials__title Подписывайтесь на нас в социальных сетях
+            span.contacts-socials__descr Мы ведём аккаунты в социальных сетях, активно рассказываем о новостях на рынке трудоустройства за границей, публикуем фотографии и отвечаем на ваши вопросы
+            .contacts-socials__list
+              a(href="#").contacts-social.contacts-social--fb
+                .contacts-social__svg
+                  +svg('fb')
+                span.contacts-social__text
+                  |Мы в Facebook
+                  br
+                  |Time-To-Act
+              a(href="#").contacts-social.contacts-social--in
+                .contacts-social__svg
+                  +svg('in')
+                span.contacts-social__text
+                  |Мы в LinkedIn
+                  br
+                  |Time-To-Act
+              a(href="#").contacts-social.contacts-social--inst
+                .contacts-social__svg
+                  +svg('inst')
+                span.contacts-social__text
+                  | Мы в Instagram
+                  br
+                  | @Timetoact
+              a(href="#").contacts-social.contacts-social--youtube
+                .contacts-social__svg
+                  +svg('youtube')
+                span.contacts-social__text
+                  | Мы на YouTube
+                  br
+                  | Timetoact
+
+        //end contacts-socials
+      //end contacts-rows-wrap
+
+    //end content
+
+    include ../sections/footer
+
+
+  include ../elements/preloader
+  include ../elements/popup
+  // это ключ без ограничений - удалить перед продакшеном
+  script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCOCsBWLmb8s4eo6cltyZG2HRu99sG3RnE")
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js')
+  include ../sections/scripts
+  script(src='./assets/js/map.js')

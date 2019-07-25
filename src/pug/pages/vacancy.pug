@@ -1,0 +1,88 @@
+extends ../_template
+
+block variables
+  - var title       = 'Статья | Time to act'
+  - var description = 'Статья | Time to act'
+  - var ogtitle     = 'Статья | Time to act'
+  - var ogimage     = 'assets/img/social.jpg'
+
+block content
+  #main-wrap.main-wrap
+    include ../sections/header
+
+    //begin content
+    .main.main-vacancy#main-vacancy
+      include ../sections/vacancy-top
+
+      .vacancy
+        .container
+          //begin vacancy-aside
+          aside.vacancy-aside
+            .vacancy-aside__vacancy
+              .vacancy-aside__vacancy-top
+                .vacancy-aside__vacancy-price
+                  span 1500-2700$
+                .vacancy-aside__vacancy-info-wrap
+                  .vacancy-aside__vacancy-info.vacancy-aside__vacancy-info--city
+                    .vacancy-aside__vacancy-svg
+                      +svg('marker')
+                    span Венгрия, г. Тата
+                  .vacancy-aside__vacancy-info.vacancy-aside__vacancy-info--gender
+                    .vacancy-aside__vacancy-svg
+                      +svg('user')
+                    span
+                      b Работа для:
+                      =' '
+                      |женщин
+                  .vacancy-aside__vacancy-info.vacancy-aside__vacancy-info--job
+                    .vacancy-aside__vacancy-svg
+                      +svg('user-card')
+                    span
+                      strong Работа по:
+                      =' '
+                      |биометрии
+
+              .vacancy-aside__vacancy-bottom
+                  button.btn.btn--highlight.popup-open(data-popup='popup-vacancy')
+                    span Оставить заявку
+          //end vacancy-aside
+            
+          //begin vacancy-body
+          .vacancy-body
+            h3.article-title Мужчины, от 25 до 55 лет, полная занятость, опыт работы от 2 лет
+            .article-text
+              p Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+              p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+              p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+            h3.article-title Стиль нумерованного списка
+            ol
+              li Lorem ipsum dolor sit amet, cons ectetuer
+              li Adipiscing elit, sed diam nonummy nibh euismod
+              li Tincidunt ut laoreet dolore magna aliquam erat volutpat
+              li Ut wisi enim ad minim veniam, quis nostrud exerci
+              li Tation ullamcorper suscipit lobortis
+              li Nisl ut aliquip ex ea commodo consequat.
+            h3.article-title Стиль булетированного списка
+            ul.custom-ul
+              li Lorem ipsum dolor sit amet, cons ectetuer
+              li Adipiscing elit, sed diam nonummy nibh euismod
+              li Tincidunt ut laoreet dolore magna aliquam erat volutpat
+              li Ut wisi enim ad minim veniam, quis nostrud exerci
+              li Tation ullamcorper suscipit lobortis
+              li Nisl ut aliquip ex ea commodo consequat.
+            h3.article-title Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+            .article-text
+              p Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+              p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat
+
+            .article-bottom#article-bottom
+              a(href="#").article-bottom__prev
+                +svg('arr-prev')
+                span Вернуться к списку вакансий
+              a(href="#").article-bottom__social.article-bottom__social--fb
+                +svg('fb')
+          //end vacancy-body
+
+    //end content
+
+    include ../sections/footer

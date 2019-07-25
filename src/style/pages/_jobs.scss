@@ -6,6 +6,7 @@
     @include max(1024) {
       flex-direction: column;
     }
+
     @include max(740) {
       padding-right: 8px;
       padding-left: 8px;
@@ -31,9 +32,11 @@
     margin-right: 0;
     transform: translateY(0);
   }
+
   @include max(740) {
     padding: 29px 29px;
   }
+
   &::before {
     position: absolute;
     top: 0;
@@ -72,10 +75,12 @@
   @include max(1024) {
     width: 50%;
   }
+
   @include max(640) {
     width: 100%;
     margin-top: 15px;
   }
+
   &:first-child {
     margin-top: 0;
   }
@@ -83,6 +88,7 @@
     @include max(1024) {
       margin-top: 0;
     }
+
     @include max(640) {
       margin-top: 15px;
     }
@@ -143,6 +149,7 @@
   @include max(640) {
     margin-top: 15px;
   }
+
   input {
     position: absolute;
     top: 0;
@@ -251,6 +258,7 @@
     margin-bottom: 15px;
     transform: translateX(0);
   }
+
   span {
     font-size: 27px;
     font-weight: 700;

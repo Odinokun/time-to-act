@@ -54,7 +54,7 @@ footer.footer
         a(href="tel:+380995552020").footer__right-phone +38 099 555 20 20
         a(href="tel:+380985552020").footer__right-phone +38 098 555 20 20
         a(href="tel:+380735552020").footer__right-phone +38 073 555 20 20
-        a(href="#").btn.btn--highlight
+        a(href="#" data-popup='popup-callback').btn.btn--highlight.popup-open
           span Обратный звонок
       //end footer__right-phones
 
@@ -69,13 +69,8 @@ footer.footer
           .footer__right-mail-svg
             +svg('mail')
           span.footer__right-mail-text timetoact.ua@gmail.com
-        a(href="#").btn.btn--black
+        a(href="#" data-popup='popup-feedback').btn.btn--black.popup-open
           span Напишите нам
       //end footer__right-contacts
-
-
     //end footer__right
-
-
-
 //end footer

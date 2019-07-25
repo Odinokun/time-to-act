@@ -7,9 +7,11 @@ $(document).ready(function ($) {
     'services',
     'jobs',
     'vacancy',
-    'articles'
-    ]);
+    'articles',
+    'contacts'
+  ]);
 });
+
 function pageWidget(pages) {
   var widgetWrap = $('<div class="widget_wrap"><ul class="widget_list"></ul></div>');
   widgetWrap.prependTo("body");
@@ -24,7 +26,39 @@ function pageWidget(pages) {
   var widgetStilization = $('<style>body {position:relative} .widget_wrap{position:fixed;top:0;left:0;z-index:19999;padding:10px 20px;background:#222;border-bottom-right-radius:10px;-webkit-transition:all .3s ease;transition:all .3s ease;-webkit-transform:translate(-100%,0);-ms-transform:translate(-100%,0);transform:translate(-100%,0)}.widget_wrap:after{content:" ";position:absolute;top:0;left:100%;width:24px;height:24px;background:#222 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAgMAAABinRfyAAAABGdBTUEAALGPC/xhBQAAAAxQTFRF////////AAAA////BQBkwgAAAAN0Uk5TxMMAjAd+zwAAACNJREFUCNdjqP///y/DfyBg+LVq1Xoo8W8/CkFYAmwA0Kg/AFcANT5fe7l4AAAAAElFTkSuQmCC) no-repeat 50% 50%;cursor:pointer}.widget_wrap:hover{-webkit-transform:translate(0,0);-ms-transform:translate(0,0);transform:translate(0,0)}.widget_item{padding:0 0 10px}.widget_link{color:#fff;text-decoration:none;font-size:15px;}.widget_link:hover{text-decoration:underline} </style>');
   widgetStilization.prependTo(".widget_wrap");
 }
+
 // END Меню для навигации при разработке
 
 
 //====== Begin Programmer code ======
+
+$(function(e) {
+  $(".contacts-social").each(function (e, t) {
+    var i = $(t);
+    i.on("mousemove", function (e) {
+      var t = i.outerWidth()
+        , a = i.outerHeight()
+        , s = i.offset().left - $(window).scrollLeft()
+        , n = i.offset().top - $(window).scrollTop()
+        , o = (e.clientX - s) / t
+        , r = (e.clientY - n) / a
+        , l = 2 * (r - .5)
+        , d = (5 - 10 * o).toFixed(2)
+        , c = ((10 * r - 5).toFixed(2),
+      10 * l);
+      TweenLite.to(i, .4, {
+        scale: 1.02,
+        rotationY: d,
+        y: c
+      })
+    }),
+      i.on("mouseleave", function (e) {
+        TweenLite.to(i, .4, {
+          scale: 1,
+          rotationX: 0,
+          rotationY: 0,
+          y: 0
+        })
+      })
+  })
+});

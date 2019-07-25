@@ -195,7 +195,6 @@ ol > *:not(li) {
   flex-direction: column;
   height: 100%;
   min-height: 100vh;
-
   //свойство для плавной прокрутки на яблоках
 
   -webkit-overflow-scrolling: touch;
@@ -224,7 +223,6 @@ ol > *:not(li) {
     max-width: 768px;
     padding: 0 72px;
   }
-
   @include max(740) {
     padding: 0 32px;
   }
@@ -245,6 +243,7 @@ ol > *:not(li) {
   padding: 0 33px;
   cursor: pointer;
   transition: .5s;
+  text-align: center;
   text-decoration: none;
   text-transform: uppercase;
   color: $text;
@@ -330,6 +329,18 @@ ol > *:not(li) {
   background-color: #fff;
   &::before {
     background-color: #212121;
+  }
+  &::after {
+    background-color: #fff;
+  }
+}
+
+.btn--blue {
+  color: #fff;
+  border: 2px solid #1976d2;
+  background-color: #1976d2;
+  &::before {
+    background-color: #1976d2;
   }
   &::after {
     background-color: #fff;

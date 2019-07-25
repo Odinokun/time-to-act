@@ -6,7 +6,8 @@ $(document).ready(function ($) {
     'article',
     'services',
     'jobs',
-    'vacancy'
+    'vacancy',
+    'articles'
     ]);
 });
 function pageWidget(pages) {

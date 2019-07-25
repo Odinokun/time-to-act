@@ -23,6 +23,9 @@ body {
   display: flex;
   flex-direction: column;
   min-width: 320px;
+  &.no-scroll {
+    overflow: hidden;
+  }
 }
 
 h1,
@@ -196,6 +199,7 @@ ol > *:not(li) {
   //свойство для плавной прокрутки на яблоках
 
   -webkit-overflow-scrolling: touch;
+
   &.no-scroll {
     overflow: hidden;
   }
@@ -298,6 +302,7 @@ ol > *:not(li) {
 
 .btn--highlight {
   border: 2px solid $highlight-y;
+  background-color: $highlight-y;
 
   &::before {
     background-color: $highlight-y;
@@ -309,6 +314,7 @@ ol > *:not(li) {
 
 .btn--white {
   border: 2px solid #fff;
+  background-color: #fff;
 
   &::before {
     background-color: #fff;
@@ -319,8 +325,9 @@ ol > *:not(li) {
 }
 
 .btn--black {
+  color: #fff;
   border: 2px solid #fff;
-color: #fff;
+  background-color: #212121;
   &::before {
     background-color: #212121;
   }

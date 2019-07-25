@@ -1,21 +1,21 @@
 module.exports = function() {
 
   // begin popup open
-  $('.popup-open').on('click', function() {
-    $('.popup, .popup__layer').fadeIn();
+  $('.popup-open').on('click', function(e) {
+    e.preventDefault();
+    $('body').addClass('no-scroll');
+    $('.popup__layer').fadeIn();
+
+    var val = $(this).attr('data-popup');
+    $('#' + val).fadeIn();
   });
   // end popup open
 
   // begin popup close
-  $('.popup__layer').on('click', function() {
+  $('.popup__layer, .popup__close, .btn__close').on('click', function() {
+    $('body').removeClass('no-scroll');
     $('.popup, .popup__layer').fadeOut();
   });
   // end popup close
-
-  // begin popup scroll
-  // $(window).on('scroll', function() {
-  //   $('.popup').css({'top': $(window).scrollTop() + 50});
-  // }).scroll();
-  // end popup scroll
 
 };

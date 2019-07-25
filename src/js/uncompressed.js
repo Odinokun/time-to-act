@@ -4,7 +4,8 @@ $(document).ready(function ($) {
   pageWidget([
     'index',
     'article',
-    'services'
+    'services',
+    'jobs'
     ]);
 });
 function pageWidget(pages) {

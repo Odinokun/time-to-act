@@ -9,6 +9,12 @@ module.exports = function() {
     offset: "100%"
   });
 
+  $(".jobs-item").waypoint(function() {
+    $(this).addClass("animated fadeInRightBig");
+  }, {
+    offset: "100%"
+  });
+
   // end Animate CSS + WayPoints javaScript Plugin
 
 };

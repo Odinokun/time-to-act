@@ -30,6 +30,9 @@ $(function() {
   // begin header
   require('./modules/header')();
 
+  // begin filter rest btn
+  require('./modules/filter-reset')();
+
   // begin Animate.css
   //РАБОТАЕТ ТОЛЬКО С JQUERY < 3.0.0 !!!!!!!!!!!!!!!!!!
   require('./modules/waypoints')();

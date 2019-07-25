@@ -9,6 +9,18 @@
   }
 }
 
+.services-top__descr {
+  display: flex;
+  align-items: flex-start;
+  padding-top: 40px;
+  padding-bottom: 10px;
+
+  @include max(740) {
+    flex-direction: column;
+    padding-top: 10px;
+  }
+}
+
 .services-top__title {
   font-size: 45px;
   font-weight: 700;
@@ -22,21 +34,10 @@
     line-height: 1.35;
     padding-right: 50px;
   }
+
   @include max(740) {
     font-size: 24px;
     margin-bottom: 20px;
-  }
-}
-
-.services-top__descr {
-  display: flex;
-  align-items: flex-start;
-  padding-top: 40px;
-  padding-bottom: 10px;
-
-  @include max(740) {
-    flex-direction: column;
-    padding-top: 10px;
   }
 }
 

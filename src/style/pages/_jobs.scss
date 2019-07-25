@@ -1,0 +1,311 @@
+.jobs {
+  .container {
+    display: flex;
+    align-items: flex-start;
+
+    @include max(1024) {
+      flex-direction: column;
+    }
+    @include max(740) {
+      padding-right: 8px;
+      padding-left: 8px;
+    }
+  }
+}
+
+.jobs-aside {
+  position: relative;
+  flex: none;
+  width: 272px;
+  margin-right: 48px;
+  padding: 57px 29px;
+  transform: translateY(-30px);
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, .09);
+
+  @include max(1024) {
+    flex: auto;
+    width: 100%;
+    margin-top: 30px;
+    margin-right: 0;
+    transform: translateY(0);
+  }
+  @include max(740) {
+    padding: 29px 29px;
+  }
+  &::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -22px;
+    width: 22px;
+    height: 130px;
+    margin: auto;
+    content: '';
+    background-image: url('../img/filters.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @include max(740) {
+      display: none;
+    }
+  }
+}
+
+.jobs-filter {
+  display: flex;
+  flex-direction: column;
+
+  @include max(1024) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.jobs-filter__label {
+  position: relative;
+  display: flex;
+  margin-top: 25px;
+  cursor: pointer;
+
+  @include max(1024) {
+    width: 50%;
+  }
+  @include max(640) {
+    width: 100%;
+    margin-top: 15px;
+  }
+  &:first-child {
+    margin-top: 0;
+  }
+  &:nth-child(2) {
+    @include max(1024) {
+      margin-top: 0;
+    }
+    @include max(640) {
+      margin-top: 15px;
+    }
+  }
+
+  input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+    &:checked + span::before {
+      border-color: $brand;
+      background-color: $brand;
+    }
+    &:checked + span::after {
+      opacity: 1;
+    }
+  }
+  span {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    display: block;
+    padding-left: 37px;
+    color: rgba(33, 33, 33, .7);
+    &::before,
+    &::after {
+      position: absolute;
+      top: 2px;
+      left: 0;
+      width: 18px;
+      height: 18px;
+      content: '';
+    }
+
+    &::before {
+      border: 2px solid rgba(33, 33, 33, .54);
+      border-radius: 4px;
+      background-color: #fff;
+    }
+    &::after {
+      z-index: 1;
+      opacity: 0;
+      background-image: url('../img/check.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 12px 12px;
+    }
+  }
+}
+
+.jobs-filter__reset {
+  position: relative;
+  display: none;
+  margin-top: 25px;
+
+  @include max(640) {
+    margin-top: 15px;
+  }
+  input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    cursor: pointer;
+    opacity: 0;;
+  }
+  svg {
+    position: absolute;
+    top: 3px;
+    left: 0;
+    fill: rgba(255, 0, 140, .7);
+    width: 14px;
+    height: 14px;
+  }
+  span {
+    font-size: 16px;
+    font-weight: 400;
+    padding-left: 37px;
+    color: rgba(255, 0, 140, .7);
+  }
+}
+
+.jobs-body {
+  padding-top: 48px;
+
+  @include max(1024) {
+    padding-top: 30px;
+  }
+}
+
+//begin jobs-item
+.jobs-item {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin-bottom: 24px;
+  padding: 32px;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, .09);
+}
+
+.jobs-item__cover-link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  transition: all .5s;
+  transform: scale(1.1);
+  opacity: 0;
+  &:hover {
+    transform: scale(1);
+    opacity: 1;
+  }
+  &::before {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    bottom: 6px;
+    left: 6px;
+    margin: auto;
+    content: '';
+    border: solid 6px #ffc107;
+  }
+}
+
+.jobs-item__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  @include max(640) {
+    flex-direction: column;
+  }
+}
+
+.jobs-item__title {
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 1.22;
+  max-width: 370px;
+  margin-bottom: 15px;
+  padding-right: 10px;
+  color: #212121;
+
+  @include max(640) {
+    font-size: 24px;
+  }
+}
+
+.jobs-item__price {
+  flex: none;
+  margin-top: 5px;
+  padding: 7px 16px;
+  transform: translateX(32px);
+  background-color: $highlight-r;
+
+  @include max(640) {
+    margin-top: 0;
+    margin-bottom: 15px;
+    transform: translateX(0);
+  }
+  span {
+    font-size: 27px;
+    font-weight: 700;
+    white-space: nowrap;
+    color: #fff;
+
+    @include max(640) {
+      font-size: 20px;
+    }
+  }
+}
+
+.jobs-item__subtitle {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  margin-bottom: 20px;
+  color: #212121;
+}
+
+.jobs-item__text {
+  span,
+  p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: rgba(33, 33, 33, .7);
+
+    @include max(640) {
+      font-size: 14px;
+    }
+  }
+}
+
+.jobs-item__link {
+  padding-left: 8px;
+  white-space: nowrap;
+  text-decoration: none;
+  span {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #1976d2;
+
+    @include max(640) {
+      font-size: 14px;
+    }
+  }
+  svg {
+    display: inline-block;
+    fill: #1976d2;
+    width: 11px;
+    height: 11px;
+    margin-left: 15px;
+  }
+}
+
+//end jobs-item

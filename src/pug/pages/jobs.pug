@@ -1,0 +1,79 @@
+extends ../_template
+
+mixin jobs-item(title, price)
+  //begin jobs-item
+  .jobs-item
+    a(href="#").jobs-item__cover-link
+    .jobs-item__header
+      h3.jobs-item__title #{title}
+      .jobs-item__price
+        span #{price}
+    h4.jobs-item__subtitle Мужчины, от 25 до 55 лет, полная занятость, опыт работы от 2 лет
+    .jobs-item__text
+      span
+        |Краткое описание вакансии. Выделял бы ключевые преимущества предложения. Ну или как вариант делал бы по аналогии с объявленями в гугле дабы повысить релевантность статьи с вакансией на которую может ссылаться объявление в Google AdWords.
+        =' '
+        a(href="#").jobs-item__link
+          span Подробнее
+          +svg('arr-next')
+  //end jobs-item
+
+
+block variables
+  - var title       = 'Вакансии | Time to act'
+  - var description = 'Вакансии | Time to act'
+  - var ogtitle     = 'Вакансии | Time to act'
+  - var ogimage     = 'assets/img/social.jpg'
+
+block content
+  #main-wrap.main-wrap
+    include ../sections/header
+
+    //begin content
+    .main.main-services
+      include ../sections/jobs-top
+
+      //begin jobs
+      .jobs
+        .container
+          //begin jobs-aside
+          aside.jobs-aside
+            form.jobs-filter
+              label.jobs-filter__label
+                input(type='checkbox')
+                span Работа для мужчин
+              label.jobs-filter__label
+                input(type='checkbox')
+                span Работа для женщин
+              label.jobs-filter__label
+                input(type='checkbox')
+                span Работа по биометрии
+              label.jobs-filter__label
+                input(type='checkbox')
+                span Работа по визе
+              .jobs-filter__reset
+                input(type='reset')
+                +svg('reset-filter')
+                span Сбросить фильтр
+          //end jobs-aside
+
+          //begin jobs-body
+          .jobs-body
+            +jobs-item('Сварщик Mig Mag Tig, Польша, г. Щецин', '1500-2700$')
+            +jobs-item('Работники контроля качества запчастей на автозаводе', '1200-1600$')
+            +jobs-item('Сварщик Mig Mag Tig, Польша, г. Щецин', '1500-2700$')
+            +jobs-item('Сварщик Mig Mag Tig, Польша, г. Щецин', '1500-2700$')
+            +jobs-item('Сварщик Mig Mag Tig, Польша, г. Щецин', '1500-2700$')
+            +jobs-item('Сварщик Mig Mag Tig, Польша, г. Щецин', '1500-2700$')
+            +jobs-item('Сварщик Mig Mag Tig, Польша, г. Щецин', '1500-2700$')
+            +jobs-item('Сварщик Mig Mag Tig, Польша, г. Щецин', '1500-2700$')
+            +jobs-item('Сварщик Mig Mag Tig, Польша, г. Щецин', '1500-2700$')
+            +jobs-item('Сварщик Mig Mag Tig, Польша, г. Щецин', '1500-2700$')
+
+            include ../elements/pagination
+          //end jobs-body
+      //end jobs
+
+    //end content
+
+    include ../sections/footer

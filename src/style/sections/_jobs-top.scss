@@ -1,0 +1,45 @@
+.jobs-top {
+  position: relative;
+  overflow: hidden;
+  padding-top: 82px;
+  padding-bottom: 79px;
+  background-image: linear-gradient(270deg, #0d47a1 0%, #1976d2 51%, #0d47a1 100%);
+
+  @include max(740) {
+    padding-top: 43px;
+  }
+}
+
+.jobs-top__descr {
+  position: relative;
+  padding-top: 40px;
+  &::before {
+    position: absolute;
+    bottom: 0;
+    left: 320px;
+    width: 200%;
+    min-height: 125px;
+    content: '';
+    opacity: .2;
+    background-image: url('../img/bg-top.png');
+    background-repeat: repeat-x;
+  }
+}
+
+.jobs-top__title {
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 50px;
+  max-width: 300px;
+  margin-bottom: 0;
+  color: #fff;
+
+  @include max(1024) {
+    font-size: 33px;
+    line-height: 1.35;
+  }
+
+  @include max(740) {
+    font-size: 24px;
+  }
+}

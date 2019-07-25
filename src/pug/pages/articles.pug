@@ -1,0 +1,57 @@
+extends ../_template
+
+mixin articles-item(pic, title, hashtag)
+  //begin articles-item
+  .articles-item
+    a(href="#").articles-item__pic-filter
+      .articles-item__pic-wrap
+        .articles-item__pic
+          img(src="assets/img/article-" + pic + ".jpg" alt="picture")
+      .articles-item__date
+        span 02/19
+
+    .articles-item__hashtag
+      img(src="assets/img/hash-" + hashtag + ".png" alt="picture")
+
+    .articles-item__text-wrap
+      h3.articles-item__title #{title}
+      p Мы обеспечиваем полное сопровождение, от индивидуального  подбора  вакансий, до выхода на работу за границей…
+      a(href="#").articles-item__link
+        span Перейти к статье
+        +svg('arr-next')
+  //end articles-item
+
+
+block variables
+  - var title       = 'Статьи | Time to act'
+  - var description = 'Статьи | Time to act'
+  - var ogtitle     = 'Статьи | Time to act'
+  - var ogimage     = 'assets/img/social.jpg'
+
+block content
+  #main-wrap.main-wrap
+    include ../sections/header
+
+    //begin content
+    .main.main-articles
+      include ../sections/articles-top
+
+      //begin articles
+      .articles
+        .container
+          +articles-item('01', 'Получение вида на жительство в словакии путем оформления чп или фирмы', '01')
+          +articles-item('02', 'Lorem ipsum dolor sit amet, consectetur adipisicing', '02')
+          +articles-item('03', 'Lorem ipsum dolor sit amet', '03')
+          +articles-item('04', 'Lorem ipsum dolor sit amet, consectetur adipisicing', '03')
+          +articles-item('05', 'Lorem ipsum dolor sit amet, consectetur adipisicing', '03')
+          +articles-item('06', 'Lorem ipsum dolor sit amet, consectetur adipisicing', '03')
+          +articles-item('07', 'Lorem ipsum dolor sit amet, consectetur adipisicing', '03')
+          +articles-item('08', 'Lorem ipsum dolor sit amet, consectetur adipisicing', '03')
+          +articles-item('09', 'Lorem ipsum dolor sit amet, consectetur adipisicing', '03')
+          +articles-item('10', 'Lorem ipsum dolor sit amet, consectetur adipisicing', '03')
+          include ../elements/pagination
+      //end articles
+
+    //end content
+
+    include ../sections/footer

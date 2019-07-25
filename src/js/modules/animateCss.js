@@ -4,7 +4,7 @@ module.exports = function() {
   //РАБОТАЕТ ТОЛЬКО С JQUERY < 3.0.0 !!!!!!!!!!!!!!!!!!
 
   $(".services__item").waypoint(function() {
-    $(this).addClass("animated zoomInUp");
+    $(this).addClass("animated fadeInLeftBig");
   }, {
     offset: "100%"
   });

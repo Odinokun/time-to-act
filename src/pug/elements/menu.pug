@@ -2,17 +2,17 @@
 nav.menu#menu
   ul.menu__list
     li.menu__item
-      a(href="#").menu__link Главная
+      a(href="#" data-popup='popup-callback-result').menu__link.popup-open Главная
     li.menu__item
-      a(href="#").menu__link Вакансии
+      a(href="#" data-popup='popup-feedback').menu__link.popup-open Вакансии
     li.menu__item
-      a(href="#").menu__link Услуги
+      a(href="#" data-popup='popup-feedback-result').menu__link.popup-open Услуги
     li.menu__item
-      a(href="#").menu__link.active Статьи
+      a(href="#" data-popup='popup-vacancy').menu__link.active.popup-open Статьи
     li.menu__item
-      a(href="#").menu__link Контакты
+      a(href="#" data-popup='popup-vacancy-result').menu__link.popup-open Контакты
 
-  button.btn.btn--white.menu-btn
+  button(data-popup='popup-callback').btn.btn--white.menu-btn.popup-open
     span Обратный звонок
 
   //begin menu-socials

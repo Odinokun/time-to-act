@@ -1,17 +1,117 @@
-//begin popup
+//begin popup section
 .popup__layer
-.popup
+
+//begin popup-callback
+.popup#popup-callback
   .popup__close
     +svg('close')
   .popup__header
-    h2.popup__title Write Review
+    h2.popup__title Обратный звонок
+    span.popup__subtitle
+      |Оставьте Ваш номер телефона и наш менеджер
+      br
+      |свяжется с Вами в ближайшее время
   .popup__body
-    // begin schedule-item__form
     form.popup__form
-        input(name='name' placeholder='Your Name').popup__form-input.input
-        input(name='email' placeholder='Email').popup__form-input.input
-        textarea(placeholder='Your review').popup__form-textarea.textarea
-        .popup__form-submit.btn
+        input(name='name' placeholder='Ваше имя').popup__input
+        input(name='phone' placeholder='Ваш телефон').popup__input
+        .btn.btn--highlight
+          span отправить сообщение
           input(type='submit' value='send')
-    // begin schedule-item__form
-//end popup
+//end popup-callback
+
+//begin popup-callback-result
+.popup.popup--result#popup-callback-result
+  .popup__close
+    +svg('close')
+  .popup__header
+    h2.popup__title Спасибо!
+    span.popup__subtitle
+      | Ваша заявка на обратный звонок
+      br
+      | успешно отправлена и наш менеджер
+      br
+      | свяжется с Вами в ближайшее время.
+  .popup__body
+    .btn.btn--highlight.btn__close
+      span ок
+      input(type='submit' value='send')
+//end popup-callback-result
+
+//begin popup-feedback
+.popup#popup-feedback
+  .popup__close
+    +svg('close')
+  .popup__header
+    h2.popup__title Напишите нам
+    span.popup__subtitle
+      | И мы с радостью ответим на любые вопросы
+      br
+      | по трудоустройству за границей
+  .popup__body
+    form.popup__form
+      input(name='name' placeholder='Ваше имя').popup__input
+      input(name='phone' placeholder='Ваш телефон').popup__input
+      input(name='text' placeholder='Сообщение').popup__input
+      .btn.btn--highlight
+        span отправить сообщение
+        input(type='submit' value='send')
+//end popup-feedback
+
+//begin popup-feedback-result
+.popup.popup--result#popup-feedback-result
+  .popup__close
+    +svg('close')
+  .popup__header
+    h2.popup__title Спасибо!
+    span.popup__subtitle
+      | Ваше сообщение успешно отправлено.
+      br
+      | Мы свяжемся с Вами в ближайшее время.
+      br
+      br
+  .popup__body
+    .btn.btn--highlight.btn__close
+      span ок
+      input(type='submit' value='send')
+//end popup-feedback-result
+
+//begin popup-vacancy
+.popup#popup-vacancy
+  .popup__close
+    +svg('close')
+  .popup__header
+    h2.popup__title Заявка на вакансию
+    span.popup__subtitle
+      | Оставьте Ваш номер телефона и наш менеджер
+      br
+      | свяжется с Вами в ближайшее время
+  .popup__body
+    form.popup__form
+      input(name='name' placeholder='Ваше имя').popup__input
+      input(name='phone' placeholder='Ваш телефон').popup__input
+      .btn.btn--highlight
+        span отправить сообщение
+        input(type='submit' value='send')
+//end popup-vacancy
+
+//begin popup-vacancy-result
+.popup.popup--result#popup-vacancy-result
+  .popup__close
+    +svg('close')
+  .popup__header
+    h2.popup__title Спасибо!
+    span.popup__subtitle
+      | Ваше сообщение успешно отправлено.
+      br
+      | Мы свяжемся с Вами в ближайшее время.
+      br
+      br
+  .popup__body
+    .btn.btn--highlight.btn__close
+      span ок
+      input(type='submit' value='send')
+//end popup-vacancy-result
+
+
+//end popup section

@@ -23,6 +23,7 @@
         margin: 20px auto;
         padding: 25px;
       }
+
       .btn {
         width: 100%;
         margin-top: 22px;
@@ -98,13 +99,34 @@
 
 //end contacts-map__banner
 
+.contacts-rows-wrap {
+  position: relative;
+  overflow: hidden;
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    content: '';
+    background-image: url('../img/bg-contacts-team.svg');
+    background-repeat: no-repeat;
+    background-position: calc(50% + 420px) calc(100% - 70px);
+
+    @include max(1024) {
+      background-position: calc(50% + 320px) calc(100% - 200px);
+    }
+    @include max(640) {
+      background-position: calc(50% + 320px) calc(100% - 500px);
+    }
+  }
+}
+
 //begin contacts-team
 .contacts-team {
   padding-top: 90px;
   padding-bottom: 60px;
-  background-image: url('../img/bg-contacts-team.png');
-  background-repeat: no-repeat;
-  background-position: calc(50% + 420px) 60%;
 
   .container {
     position: relative;
@@ -113,6 +135,7 @@
     @include max(740) {
       padding: 0 32px;
     }
+
     &::before {
       font-size: 165px;
       font-weight: 700;
@@ -149,6 +172,7 @@
   line-height: 50px;
   margin-bottom: 35px;
   color: #212121;
+
   @include max(740) {
     font-size: 34px;
     line-height: 1.2;
@@ -232,6 +256,7 @@
   .container {
     padding-bottom: 66px;
     padding-left: 108px;
+
     @include max(740) {
       padding: 0 32px;
     }
@@ -248,7 +273,6 @@
       @include max(1024) {
         display: none;
       }
-
     }
   }
 }
@@ -260,6 +284,7 @@
   max-width: 540px;
   margin-bottom: 30px;
   color: #212121;
+
   @include max(740) {
     font-size: 34px;
     line-height: 1.2;

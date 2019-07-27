@@ -19,7 +19,7 @@ $(function() {
   require('./modules/link-position')();
 
   // begin Slick slider
-  // require('./modules/slick')();
+  require('./modules/slick')();
 
   // begin Popup
   require('./modules/popup')();
@@ -38,7 +38,10 @@ $(function() {
   require('./modules/waypoints')();
   require('./modules/animateCss')();
 
-  // begin Fancybox3
-  // require('./modules/fancybox')();
+  // begin scroll
+  require('./modules/scroll')();
+
+  // begin gsap social
+  require('./modules/gsap')();
 
 });

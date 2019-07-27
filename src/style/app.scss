@@ -11,8 +11,7 @@
 @import 'elements/burger';
 @import 'elements/popup';
 @import 'elements/pagination';
-//@import 'elements/breadcrumbs';
-//@import 'elements/slickBase';
+@import 'elements/slickBase';
 
 //section
 @import 'sections/footer';
@@ -24,6 +23,10 @@
 @import 'sections/articles-top';
 @import 'sections/vacancy-top';
 @import 'sections/contacts-top';
+@import 'sections/index-top';
+@import 'sections/why-we';
+@import 'sections/about';
+@import 'sections/index-reviews';
 
 //pages
 @import 'pages/index';

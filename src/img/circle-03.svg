@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="2915px" height="2915px" viewBox="0 0 2915 2915" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>03</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="82.5814734%" y1="51.5997561%" x2="7.64622574%" y2="51.5997561%" id="linearGradient-1">
+            <stop stop-color="#0D47A1" offset="0%"></stop>
+            <stop stop-color="#1976D2" offset="51.1357478%"></stop>
+            <stop stop-color="#0D47A1" offset="100%"></stop>
+        </linearGradient>
+        <path d="M960.83167,1920.25325 C831.273502,1920.25325 705.538302,1894.85586 587.119866,1844.76649 C472.789534,1796.4066 370.131708,1727.1959 281.996856,1639.05648 C193.862003,1550.91706 124.654891,1448.25391 76.297507,1333.91765 C26.2107333,1215.49307 0.814665008,1089.75135 0.814665008,960.186469 C0.814665008,830.621584 26.2107333,704.880865 76.297507,586.45529 C124.654891,472.120031 193.862003,369.456382 281.996856,281.31646 C370.131708,193.177039 472.789534,123.966338 587.119866,75.6064474 C705.538302,25.517077 831.273502,0.119191757 960.83167,0.119191757 C1090.38984,0.119191757 1216.12504,25.517077 1334.54347,75.6064474 C1448.87381,123.966338 1551.53213,193.177039 1639.66648,281.31646 C1727.80284,369.456382 1797.00845,472.120031 1845.36683,586.45529 C1895.45311,704.880865 1920.85018,830.621584 1920.85018,960.186469 C1920.85018,1089.75135 1895.45311,1215.49307 1845.36683,1333.91765 C1797.00845,1448.25391 1727.80284,1550.91706 1639.66648,1639.05648 C1551.53213,1727.1959 1448.87381,1796.4066 1334.54347,1844.76649 C1216.12504,1894.85586 1090.38984,1920.25325 960.83167,1920.25325" id="path-2"></path>
+        <filter x="-4.7%" y="-4.6%" width="109.5%" height="109.5%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="30" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.15 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter2"></feOffset>
+            <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter2" result="shadowBlurOuter2"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.11 0" type="matrix" in="shadowBlurOuter2" result="shadowMatrixOuter2"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="shadowMatrixOuter2"></feMergeNode>
+            </feMerge>
+        </filter>
+        <filter x="-3.2%" y="-3.1%" width="106.5%" height="106.5%" filterUnits="objectBoundingBox" id="filter-4">
+            <feGaussianBlur stdDeviation="2" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="0" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 0.24 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="03" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Blue-Circles-03" transform="translate(593.000000, 891.000000)">
+            <g id="Fill-6">
+                <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                <use fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-2"></use>
+                <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-2"></use>
+            </g>
+        </g>
+    </g>
+</svg>

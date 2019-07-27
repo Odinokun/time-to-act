@@ -12,6 +12,12 @@ block content
 
     //begin content
     .main.main-index
+      include ../sections/index-top
+      include ../sections/why-we
+
+      .main-index__bg-wrap
+        include ../sections/about
+        include ../sections/index-reviews
     //end content
 
     include ../sections/footer
@@ -19,3 +25,6 @@ block content
   include ../elements/preloader
   include ../elements/popup
   include ../sections/scripts
+  script.
+    var scene = document.getElementById('scene');
+    var parallaxInstance = new Parallax(scene);

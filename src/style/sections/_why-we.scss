@@ -1,0 +1,250 @@
+.why-we {
+  position: relative;
+  &::before {
+    position: absolute;
+    top: -500px;
+    right: 0;
+    bottom: 200px;
+    left: 0;
+    margin: auto;
+    content: '';
+    background-image: url('../img/bg-why-we.png');
+    background-repeat: no-repeat;
+    background-position: 50% 100%;
+  }
+  .container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-left: 108px;
+    transform: translateY(-32px);
+
+    @include max(1024) {
+      padding: 0 72px;
+    }
+    @include max(767) {
+      flex-direction: column;
+      padding: 0 32px;
+    }
+    @include max(425) {
+      padding: 0 8px;
+    }
+    &::before {
+      font-size: 165px;
+      font-weight: 700;
+      position: absolute;
+      top: -50px;
+      left: -130px;
+      content: '01';
+      opacity: .7;
+      color: #fff;
+
+      @include max(1290) {
+        display: none;
+      }
+    }
+  }
+}
+
+.why-we-hashtag {
+  position: absolute;
+  top: 165px;
+  left: -7px;
+
+  @include max(1024) {
+    top: 100px;
+    left: 20px;
+  }
+  @include max(767) {
+    display: none;
+  }
+}
+
+.why-we__left {
+  width: 400px;
+
+  @include max(1024) {
+    width: 304px;
+  }
+  @include max(767) {
+    width: 100%;
+  }
+}
+
+.why-we__right {
+  width: 400px;
+  padding-bottom: 83px;
+  transform: translateY(-37px);
+
+  @include max(1024) {
+    width: 304px;
+  }
+  @include max(767) {
+    width: 100%;
+    padding-bottom: 0;
+    transform: translateY(0);
+  }
+  .btn {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    max-width: 260px;
+    margin: auto;
+
+    @include max(767) {
+      position: relative;
+    }
+  }
+}
+
+.why-we__title {
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 50px;
+  margin-bottom: 62px;
+  color: #212121;
+
+  @include max(1024) {
+    font-size: 33px;
+    line-height: 1.2;
+  }
+  @include max(767) {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  @include max(425) {
+    padding: 0 24px;
+  }
+}
+
+.why-we__item {
+  position: relative;
+  min-height: 400px;
+  margin-bottom: 64px;
+  padding: 38px 32px;
+  border-radius: 4px;
+
+  @include max(1024) {
+    margin-bottom: 16px;
+  }
+  @include max(767) {
+    min-height: 0;
+    margin-bottom: 8px;
+    padding: 16px 24px;
+    transform: translateY(0) !important;
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    content: '';
+    transition: all .5s;
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, .09);
+  }
+  &:hover {
+    &::before {
+      transform: scale(1.15);
+      background-color: #1976d2;
+
+      @include max(1024) {
+        transform: scale(1.07);
+      }
+    }
+    svg {
+      stroke: $highlight-y;
+    }
+    p,
+    .why-we__item-title {
+      color: #fff;
+    }
+  }
+
+  svg {
+    position: relative;
+    fill: transparent;
+    margin-bottom: 38px;
+    transition: stroke .5s;
+
+    stroke: #2196f3;
+    @include max(1024) {
+      margin-bottom: 20px;
+    }
+  }
+  p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    position: relative;
+    transition: color .5s;
+    opacity: .7;
+    color: #212121;
+
+    @include max(767) {
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
+}
+
+.why-we__item--01 svg {
+  width: 79px;
+  height: 83px;
+
+  @include max(767) {
+    width: 53px;
+    height: 56px;
+  }
+}
+
+.why-we__item--02 svg {
+  width: 94px;
+  height: 87px;
+
+  @include max(767) {
+    width: 62px;
+    height: 58px;
+  }
+}
+
+.why-we__item--03 svg {
+  width: 83px;
+  height: 92px;
+
+  @include max(767) {
+    width: 55px;
+    height: 61px;
+  }
+}
+
+.why-we__item--04 svg {
+  width: 73px;
+  height: 73px;
+
+  @include max(767) {
+    width: 48px;
+    height: 47px;
+  }
+}
+
+.why-we__item-title {
+  font-size: 27px;
+  font-weight: 700;
+  position: relative;
+  margin-bottom: 15px;
+  transition: color .5s;
+
+  @include max(767) {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+}

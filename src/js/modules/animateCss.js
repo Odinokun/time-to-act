@@ -15,6 +15,12 @@ module.exports = function() {
     offset: "100%"
   });
 
+  $(".articles-item").waypoint(function() {
+    $(this).addClass("animated zoomInRight");
+  }, {
+    offset: "100%"
+  });
+
   // end Animate CSS + WayPoints javaScript Plugin
 
 };

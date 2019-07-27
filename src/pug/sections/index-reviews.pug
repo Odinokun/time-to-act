@@ -1,0 +1,61 @@
+mixin index-reviews__slide()
+  li.index-reviews__slide
+    .index-reviews__slide-img
+      img(src="assets/img/slide-01.jpg" alt="picture")
+
+//begin index-reviews
+.index-reviews
+  .container
+    .reviews-hashtag
+      img(src="assets/img/reviews.png" alt="picture")
+
+
+    .index-reviews__header
+      h2.index-reviews__title
+        | Отзывы
+        br
+        | наших клиентов
+
+    .index-reviews__slider-row
+
+      //begin index-reviews__slider
+      .index-reviews__slider-wrap
+        ul.index-reviews__slider#index-reviews__slider
+          +index-reviews__slide
+          +index-reviews__slide
+          +index-reviews__slide
+          +index-reviews__slide
+          +index-reviews__slide
+          +index-reviews__slide
+          +index-reviews__slide
+          +index-reviews__slide
+          +index-reviews__slide
+          +index-reviews__slide
+      //end index-reviews__slider
+
+      .index-reviews__counter
+        span#counter-tab.index-reviews__counter-tab 1
+        span.index-reviews__slider-counter-divide /
+        span#counter-all.index-reviews__counter-all
+
+      //begin index-reviews__banner
+      .index-reviews__banner
+        .index-reviews__banner-top
+          h3.index-reviews__banner-title Оставьте отзыв!
+          p
+            |Напишите свой отзыв про
+            br
+            |работу с нами на Viber
+            br
+            |и мы обязательно его
+            br
+            |опубликуем.
+        .index-reviews__banner-bottom
+          .index-reviews__banner-viber
+            img(src="assets/img/viber.svg" alt="picture")
+          a(href="tel:+3809855520200").index-reviews__banner-phone
+            img(src="assets/img/phone.png" alt="picture")
+          span.index-reviews__banner-tnx Спасибо!
+      //begin index-reviews__banner
+
+//end index-reviews

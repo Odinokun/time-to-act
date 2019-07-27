@@ -1,0 +1,51 @@
+mixin index-top__slide(slide, position, price)
+  li.index-top__slide
+    img(src="assets/img/top-slide-" + slide + ".png" alt="picture")
+    .index-top__slide-label
+      span.index-top__slide-position #{position}
+      .index-top__slide-price
+        span #{price}
+        span.index-top__slide-price-curr &#36;
+
+
+//begin index-top
+.index-top
+  //begin circles-decor
+  .circles-decor
+    .index-top__circle-wrap#scene
+      .index-top__circle.index-top__circle-05(data-depth="0.05")
+        img(src="assets/img/circle-05.svg" alt="picture")
+      .index-top__circle.index-top__circle-04(data-depth="0.06")
+        img(src="assets/img/circle-04.svg" alt="picture")
+      .index-top__circle.index-top__circle-03(data-depth="0.07")
+        img(src="assets/img/circle-03.svg" alt="picture")
+      .index-top__circle.index-top__circle-02(data-depth="0.08")
+        img(src="assets/img/circle-02.svg" alt="picture")
+      .index-top__circle.index-top__circle-01(data-depth="0.09")
+        img(src="assets/img/circle-01.svg" alt="picture")
+  //end circles-decor
+
+  .container
+    include top-row
+
+  //begin index-top__information
+  .index-top__information
+    .container
+      //begin index-top__text
+      .index-top__text
+        h2.index-top__title Работа за границей. Легально с полным сопровождением.
+        span.index-top__subtitle Полное сопровождение – от бесплатного подбора вакансий, до выхода на работу за границей. Работа в Польше, работа в Литве, работа в Германии и других странах Европы.
+        a(href="#").btn.btn--highlight
+          span Посмотреть вакансии
+      //end index-top__text
+
+      //begin index-top__slider
+      ul.index-top__slider#index-top__slider
+        +index-top__slide('01', 'Сварщик Mig Mag Tig', '1500-2700')
+        +index-top__slide('02', 'Плиточник', '1800-2700')
+        +index-top__slide('03', 'Рабочий мебельной фабрики', '1100-1450')
+      //end index-top__slider
+  //begin index-top__information
+
+
+//end index-top

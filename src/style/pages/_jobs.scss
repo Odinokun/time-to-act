@@ -6,7 +6,6 @@
     @include max(1024) {
       flex-direction: column;
     }
-
     @include max(740) {
       padding-right: 8px;
       padding-left: 8px;
@@ -32,7 +31,6 @@
     margin-right: 0;
     transform: translateY(0);
   }
-
   @include max(740) {
     padding: 29px 29px;
   }
@@ -75,7 +73,6 @@
   @include max(1024) {
     width: 50%;
   }
-
   @include max(640) {
     width: 100%;
     margin-top: 15px;
@@ -88,7 +85,6 @@
     @include max(1024) {
       margin-top: 0;
     }
-
     @include max(640) {
       margin-top: 15px;
     }
@@ -241,8 +237,9 @@
   padding-right: 10px;
   color: #212121;
 
-  @include max(640) {
-    font-size: 24px;
+  @include max(767) {
+    font-size: 20px;
+    line-height: 1.2;
   }
 }
 
@@ -256,7 +253,7 @@
   @include max(640) {
     margin-top: 0;
     margin-bottom: 15px;
-    transform: translateX(0);
+    transform: translateX(-32px);
   }
 
   span {
@@ -287,8 +284,9 @@
     line-height: 24px;
     color: rgba(33, 33, 33, .7);
 
-    @include max(640) {
+    @include max(767) {
       font-size: 14px;
+      line-height: 17px;
     }
   }
 }
@@ -303,8 +301,9 @@
     line-height: 24px;
     color: #1976d2;
 
-    @include max(640) {
+    @include max(767) {
       font-size: 14px;
+      line-height: 17px;
     }
   }
   svg {

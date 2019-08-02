@@ -5,7 +5,7 @@
     justify-content: flex-end;
     padding-top: 80px;
 
-    @include max(740) {
+    @include max(1024) {
       flex-direction: column;
       justify-content: flex-start;
       align-items: center;
@@ -26,6 +26,7 @@
   @include max(767) {
     display: none;
   }
+
   img {
     display: block;
     width: 100%;
@@ -36,6 +37,13 @@
   width: 100%;
   max-width: 400px;
   margin-bottom: 20px;
+
+  @include max(1024) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 100%;
+  }
 }
 
 .services__item {
@@ -45,6 +53,17 @@
   border-radius: 4px;
   background-color: #fff;
   box-shadow: 0 2px 16px rgba(0, 0, 0, .09);
+
+  @include max(1024) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(50% - 16px);
+    margin-bottom: 32px;
+  }
+  @include max(640) {
+    width: 100%;
+  }
 }
 
 .services__item-title {
@@ -54,6 +73,11 @@
   margin-bottom: 33px;
   text-align: left;
   color: #212121;
+
+  @include max(767) {
+    font-size: 20px;
+    line-height: 1.2;
+  }
 }
 
 .services__item-price {
@@ -61,10 +85,19 @@
   padding: 7px 16px 7px 16px;
   text-align: center;
   background-color: $highlight-r;
+
+  @include max(1024) {
+    margin-top: auto;
+  }
   span {
     font-size: 27px;
     font-weight: 700;
     color: #fff;
+
+    @include max(767) {
+      font-size: 20px;
+      line-height: 1.2;
+    }
   }
 }
 
@@ -73,7 +106,8 @@
   max-width: 400px;
   margin-left: 64px;
 
-  @include max(740) {
+  @include max(1024) {
+    max-width: 100%;
     margin-left: 0;
   }
 }
@@ -104,6 +138,11 @@
   line-height: 1.2;
   margin-bottom: 15px;
   color: #fff;
+
+  @include max(767) {
+    font-size: 20px;
+    line-height: 1.2;
+  }
 }
 
 .services__form-text {
@@ -113,6 +152,11 @@
   display: block;
   margin-bottom: 45px;
   color: #fff;
+
+  @include max(767) {
+    font-size: 14px;
+    line-height: 17px;
+  }
 }
 
 .services__form-input {
@@ -143,6 +187,11 @@
   font-weight: 400;
   line-height: 24px;
   color: #212121;
+
+  @include max(767) {
+    font-size: 14px;
+    line-height: 17px;
+  }
 }
 
 .services__promise {
@@ -153,6 +202,11 @@
     line-height: 24px;
     margin-bottom: 20px;
     color: rgba(33, 33, 33, .7);
+
+    @include max(767) {
+      font-size: 14px;
+      line-height: 17px;
+    }
   }
 }
 
@@ -162,4 +216,9 @@
   line-height: 1.2;
   margin-bottom: 25px;
   color: #212121;
+
+  @include max(767) {
+    font-size: 20px;
+    line-height: 1.2;
+  }
 }

@@ -13,6 +13,9 @@
 .articles-top__descr {
   position: relative;
   padding-top: 40px;
+  @include max(580) {
+    padding-top: 0;
+  }
   p {
     font-size: 16px;
     font-weight: 400;
@@ -20,6 +23,11 @@
     max-width: 530px;
     margin-bottom: 0;
     color: #fff;
+
+    @include max(767) {
+      font-size: 14px;
+      line-height: 17px;
+    }
   }
   &::before {
     position: absolute;
@@ -46,8 +54,7 @@
     font-size: 33px;
     line-height: 1.35;
   }
-
-  @include max(740) {
+  @include max(767) {
     font-size: 24px;
   }
 }

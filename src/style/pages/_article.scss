@@ -1,10 +1,13 @@
 .article-pic {
   position: relative;
   overflow: hidden;
-  max-height: 363px;
-  img {
-    display: block;
-    width: 100%;
+  height: 363px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+
+  @include max(740) {
+    height: 250px;
   }
   &.active {
     .article-pic__mask-left,
@@ -56,6 +59,10 @@
   margin-left: auto;
   padding-top: 72px;
   padding-bottom: 20px;
+
+  @include max(740) {
+    padding-top: 40px;
+  }
 }
 
 .article-title {
@@ -65,8 +72,9 @@
   margin-bottom: 25px;
   color: #212121;
 
-  @include max(640) {
+  @include max(767) {
     font-size: 20px;
+    line-height: 1.2;
   }
 }
 
@@ -76,6 +84,11 @@
   line-height: 24px;
   margin-bottom: 55px;
   color: rgba(33, 33, 33, .7);
+
+  @include max(767) {
+    font-size: 14px;
+    line-height: 17px;
+  }
   p {
     font-size: 16px;
     font-weight: 400;
@@ -83,8 +96,9 @@
     margin-bottom: 20px;
     color: rgba(33, 33, 33, .7);
 
-    @include max(740) {
+    @include max(767) {
       font-size: 14px;
+      line-height: 17px;
     }
   }
 }
@@ -107,7 +121,7 @@
     width: 0;
     height: 1px;
     content: '';
-    transition: width 1.5s ease;
+    transition: width .7s ease;
     opacity: .4;
     background-color: #212121;
   }
@@ -118,7 +132,7 @@
     bottom: 0;
     width: 100%;
     content: '';
-    transition: width 1.5s;
+    transition: width .7s;
     background-color: #eee;
   }
   &.active {
@@ -137,12 +151,19 @@
   align-items: center;
   &:hover {
     text-decoration: none;
+    svg {
+      fill: $highlight-y;
+    }
+    span {
+      color: $highlight-y;
+    }
   }
   svg {
     flex: none;
     fill: #1976d2;
     width: 12px;
     height: 11px;
+    transition: fill .5s;
   }
   span {
     font-size: 16px;
@@ -150,6 +171,7 @@
     line-height: 24px;
     display: block;
     padding: 0 20px;
+    transition: color .5s;
     color: #1976d2;
 
     @include max(740) {

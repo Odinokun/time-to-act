@@ -9,6 +9,7 @@
   @include max(640) {
     display: block;
   }
+
   &.active {
     .burger-btn--base {
       opacity: 0;

@@ -75,7 +75,11 @@
     fill: #fff;
     width: 19px;
     height: 19px;
+    transition: opacity .5s;
     opacity: .4;
+    &:hover {
+      opacity: 1;
+    }
   }
 }
 
@@ -179,7 +183,7 @@
   padding-bottom: 8px;
   color: #fff;
 
-  @include max(740) {
+  @include max(767) {
     font-size: 14px;
     padding-bottom: 13px;
   }
@@ -295,7 +299,7 @@
   text-transform: uppercase;
   color: #ffc107;
 
-  @include max(740) {
+  @include max(767) {
     font-size: 14px;
   }
 }

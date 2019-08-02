@@ -1,11 +1,12 @@
 mixin index-top__slide(slide, position, price)
   li.index-top__slide
-    img(src="assets/img/top-slide-" + slide + ".png" alt="picture")
-    .index-top__slide-label
-      span.index-top__slide-position #{position}
-      .index-top__slide-price
-        span #{price}
-        span.index-top__slide-price-curr &#36;
+    a(href="jobs.html")
+      img(src="assets/img/top-slide-" + slide + ".png" alt="picture")
+      .index-top__slide-label
+        span.index-top__slide-position #{position}
+        .index-top__slide-price
+          span #{price}
+          span.index-top__slide-price-curr &#36;
 
 
 //begin index-top
@@ -13,15 +14,15 @@ mixin index-top__slide(slide, position, price)
   //begin circles-decor
   .circles-decor
     .index-top__circle-wrap#scene
-      .index-top__circle.index-top__circle-05(data-depth="0.05")
+      .index-top__circle.index-top__circle-05(data-depth="0.12")
         img(src="assets/img/circle-05.svg" alt="picture")
-      .index-top__circle.index-top__circle-04(data-depth="0.06")
+      .index-top__circle.index-top__circle-04(data-depth="0.1")
         img(src="assets/img/circle-04.svg" alt="picture")
-      .index-top__circle.index-top__circle-03(data-depth="0.07")
+      .index-top__circle.index-top__circle-03(data-depth="0.08")
         img(src="assets/img/circle-03.svg" alt="picture")
-      .index-top__circle.index-top__circle-02(data-depth="0.08")
+      .index-top__circle.index-top__circle-02(data-depth="0.06")
         img(src="assets/img/circle-02.svg" alt="picture")
-      .index-top__circle.index-top__circle-01(data-depth="0.09")
+      .index-top__circle.index-top__circle-01(data-depth="0.04")
         img(src="assets/img/circle-01.svg" alt="picture")
   //end circles-decor
 

@@ -31,11 +31,10 @@
 
   @include max(1024) {
     font-size: 33px;
-    line-height: 1.35;
+    line-height: 1.2;
     padding-right: 50px;
   }
-
-  @include max(740) {
+  @include max(767) {
     font-size: 24px;
     margin-bottom: 20px;
   }
@@ -60,8 +59,9 @@
     line-height: 23px;
     color: #fff;
 
-    @include max(740) {
+    @include max(767) {
       font-size: 14px;
+      line-height: 17px;
     }
   }
   &::before {

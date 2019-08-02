@@ -22,15 +22,20 @@
     transform: translateY(-32px);
 
     @include max(1024) {
+      margin-top: -100px;
       padding: 0 72px;
     }
     @include max(767) {
       flex-direction: column;
       padding: 0 32px;
     }
+    @include max(740) {
+      margin-top: -80px;
+    }
     @include max(425) {
       padding: 0 8px;
     }
+
     &::before {
       font-size: 165px;
       font-weight: 700;
@@ -86,6 +91,7 @@
     padding-bottom: 0;
     transform: translateY(0);
   }
+
   .btn {
     position: absolute;
     right: 0;
@@ -94,9 +100,19 @@
     display: block;
     max-width: 260px;
     margin: auto;
+    box-shadow: 0 6px 8px rgba(255, 193, 7, .4);
 
     @include max(767) {
       position: relative;
+    }
+    @include max(640) {
+      font-size: 12px;
+      line-height: 28px;
+      display: inline-block;
+      height: 28px;
+      margin: 0;
+      padding: 0 15px;
+      border-width: 1px;
     }
   }
 }
@@ -175,6 +191,7 @@
     margin-bottom: 38px;
     transition: stroke .5s;
 
+    stroke-width: 2px;
     stroke: #2196f3;
     @include max(1024) {
       margin-bottom: 20px;

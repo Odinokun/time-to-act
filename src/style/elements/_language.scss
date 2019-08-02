@@ -10,7 +10,6 @@
     right: 2px;
     margin-right: 0;
   }
-
   @include max(640) {
     position: relative;
     top: 0;
@@ -66,12 +65,21 @@
 
 .language__btn {
   position: absolute;
-  top: 8px;
+  top: 0;
   right: 0;
-  width: 8px;
-  height: 4px;
+  left: 0;
+  height: 22px;
   cursor: pointer;
-  border-top: 4px solid $highlight-y;
-  border-right: 4px solid transparent;
-  border-left: 4px solid transparent;
+
+  &::before {
+    position: absolute;
+    top: 8px;
+    right: 0;
+    width: 8px;
+    height: 4px;
+    content: '';
+    border-top: 4px solid $highlight-y;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+  }
 }

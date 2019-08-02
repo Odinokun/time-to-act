@@ -37,6 +37,7 @@
     width: 100%;
     max-width: 480px;
   }
+
   &:hover {
     .articles-item__date {
       opacity: 1;
@@ -58,6 +59,7 @@
       @include max(1024) {
         transform: translateX(0);
       }
+
       & + .articles-item__hashtag {
         transform: translateX(80px);
 
@@ -120,6 +122,7 @@
   @include max(1024) {
     padding-left: 0;
   }
+
   p {
     font-size: 16px;
     font-weight: 400;
@@ -127,6 +130,11 @@
     margin: 0;
     opacity: .7;
     color: #212121;
+
+    @include max(767) {
+      font-size: 14px;
+      line-height: 17px;
+    }
   }
 }
 
@@ -136,6 +144,11 @@
   line-height: 1.2;
   margin-bottom: 20px;
   color: #212121;
+
+  @include max(767) {
+    font-size: 20px;
+    line-height: 1.2;
+  }
 }
 
 .articles-item__link {
@@ -156,6 +169,11 @@
     position: relative;
     display: block;
     color: #1976d2;
+
+    @include max(767) {
+      font-size: 14px;
+      line-height: 17px;
+    }
     &::before {
       position: absolute;
       right: 0;

@@ -36,10 +36,10 @@
 
   @include max(1024) {
     font-size: 33px;
-    line-height: 1.35;
+    line-height: 1.2;
   }
 
-  @include max(740) {
+  @include max(767) {
     font-size: 24px;
   }
 }

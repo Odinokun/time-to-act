@@ -13,6 +13,7 @@
     @include max(767) {
       padding: 0 32px;
     }
+
     &::before {
       font-size: 165px;
       font-weight: 700;
@@ -52,6 +53,7 @@
     flex: auto;
     width: 100%;
   }
+
   p {
     font-size: 16px;
     font-weight: 400;
@@ -59,6 +61,11 @@
     margin-bottom: 20px;
     opacity: .7;
     color: #212121;
+
+    @include max(767) {
+      font-size: 14px;
+      line-height: 17px;
+    }
   }
 }
 
@@ -71,6 +78,11 @@
     font-weight: 700;
     line-height: 24px;
     color: #1976d2;
+
+    @include max(767) {
+      font-size: 14px;
+      line-height: 17px;
+    }
   }
   svg {
     display: inline-block;
@@ -92,6 +104,7 @@
 }
 
 .about__license {
+  display: block;
   overflow: hidden;
   border-radius: 4px;
   background-color: #fff;
@@ -112,9 +125,6 @@
   @include max(767) {
     font-size: 24px;
     margin-bottom: 20px;
-  }
-  @include max(425) {
-    padding: 0 24px;
   }
 }
 
@@ -143,6 +153,7 @@
     margin-bottom: 20px;
     padding-right: 0;
   }
+
   &:last-child {
     padding-right: 0;
   }
@@ -163,4 +174,9 @@
   line-height: 24px;
   opacity: .7;
   color: #212121;
+
+  @include max(767) {
+    font-size: 14px;
+    line-height: 17px;
+  }
 }

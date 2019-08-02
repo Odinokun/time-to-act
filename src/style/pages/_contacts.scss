@@ -58,6 +58,11 @@
   white-space: nowrap;
   text-transform: uppercase;
   color: #212121;
+
+  @include max(767) {
+    font-size: 14px;
+    line-height: 17px;
+  }
 }
 
 .contacts-map__banner-adress,
@@ -71,6 +76,10 @@
     padding-left: 33px;
     white-space: nowrap;
     color: #212121;
+
+    @include max(767) {
+      font-size: 14px;
+    }
   }
 }
 
@@ -173,9 +182,12 @@
   margin-bottom: 35px;
   color: #212121;
 
-  @include max(740) {
-    font-size: 34px;
+  @include max(1024) {
+    font-size: 33px;
     line-height: 1.2;
+  }
+  @include max(767) {
+    font-size: 24px;
   }
 }
 
@@ -221,6 +233,11 @@
   font-size: 27px;
   font-weight: 700;
   color: #212121;
+
+  @include max(767) {
+    font-size: 20px;
+    line-height: 1.2;
+  }
 }
 
 .contacts-team__position {
@@ -232,6 +249,11 @@
   margin-bottom: 18px;
   opacity: .7;
   color: #212121;
+
+  @include max(767) {
+    font-size: 14px;
+    line-height: 17px;
+  }
 }
 
 .contacts-team__phone {
@@ -240,6 +262,11 @@
   line-height: 24px;
   opacity: .7;
   color: #212121;
+
+  @include max(767) {
+    font-size: 14px;
+    line-height: 17px;
+  }
 }
 
 //end contacts-team
@@ -285,9 +312,12 @@
   margin-bottom: 30px;
   color: #212121;
 
-  @include max(740) {
-    font-size: 34px;
+  @include max(1024) {
+    font-size: 33px;
     line-height: 1.2;
+  }
+  @include max(767) {
+    font-size: 24px;
   }
 }
 
@@ -300,6 +330,11 @@
   margin-bottom: 52px;
   opacity: .7;
   color: #212121;
+
+  @include max(767) {
+    font-size: 14px;
+    line-height: 17px;
+  }
 }
 
 .contacts-socials__list {

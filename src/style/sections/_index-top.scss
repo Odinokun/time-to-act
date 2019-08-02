@@ -1,10 +1,9 @@
 .index-top {
   position: relative;
+  z-index: 1;
   overflow: hidden;
   height: 950px;
   padding-top: 82px;
-  z-index: 1;
-  //background-color: #bbdefb;
 
   @include max(740) {
     height: 800px;
@@ -19,11 +18,14 @@
   transform: translate(-1457px, -2000px);
   //transform: translate(-1457px, calc(-100% + 915px));
 
+  @include max(1024) {
+    transform: translate(-1457px, -2000px) scale(.92);
+  }
   @include max(740) {
-    transform: translate(-1457px, -2150px);
+    transform: translate(-1457px, -2150px) scale(.92);
   }
   @include max(640) {
-    transform: translate(-1700px, -2150px);
+    transform: translate(-1700px, -2150px) scale(.92);
   }
 }
 
@@ -36,6 +38,7 @@
   @include max(640) {
     transform: translateY(-60px);
   }
+
   .container {
     display: flex;
     align-items: flex-start;
@@ -53,6 +56,10 @@
   @include max(1024) {
     padding: 10px 10px 0 0;
   }
+  @include max(740) {
+    padding: 0;
+  }
+
   .btn {
     @include max(640) {
       font-size: 12px;
@@ -76,7 +83,8 @@
     line-height: 1.2;
     margin-bottom: 24px;
   }
-  @include max(640) {
+  @include max(767) {
+    margin-top: 40px;
     font-size: 24px;
   }
 }
@@ -92,7 +100,7 @@
   @include max(1024) {
     margin-bottom: 30px;
   }
-  @include max(640) {
+  @include max(767) {
     font-size: 14px;
     line-height: 17px;
   }
@@ -119,6 +127,7 @@
       margin-bottom: 0;
     }
   }
+
   .slick-dots li {
     position: relative;
     display: inline-block;
@@ -131,6 +140,7 @@
     @include max(640) {
       width: 4px;
     }
+
     &.slick-active {
       &::before {
         animation: sliderDots 3.5s linear forwards;
@@ -180,6 +190,7 @@
   @include max(1024) {
     min-height: 0;
   }
+
   img {
     display: block;
     max-width: 100%;
@@ -192,6 +203,9 @@
   position: absolute;
   right: 0;
   bottom: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
   text-align: right;
 
   @include max(1024) {
@@ -201,7 +215,8 @@
   @include max(640) {
     right: 0;
     bottom: 20px;
-    max-width: 90%;
+    left: -10px;
+    pointer-events: none;
   }
 }
 

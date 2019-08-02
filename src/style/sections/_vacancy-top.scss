@@ -17,6 +17,11 @@
   margin-bottom: 15px;
   text-transform: uppercase;
   color: #bbdefb;
+
+  @include max(767) {
+    font-size: 14px;
+    line-height: 17px;
+  }
 }
 
 .vacancy-top__title {
@@ -28,11 +33,10 @@
 
   @include max(1024) {
     font-size: 33px;
-    line-height: 1.35;
+    line-height: 1.2;
     padding-right: 50px;
   }
-
-  @include max(740) {
+  @include max(767) {
     font-size: 24px;
   }
 }
@@ -47,10 +51,13 @@
   display: block;
   text-transform: uppercase;
 
+  @include max(767) {
+    font-size: 14px;
+    line-height: 17px;
+  }
   @include max(740) {
     right: 15px;
   }
-
   @include max(425) {
     right: 10px;
   }

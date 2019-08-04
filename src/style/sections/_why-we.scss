@@ -104,15 +104,18 @@
 
     @include max(767) {
       position: relative;
+      margin: 40px 0 0 0;
     }
     @include max(640) {
       font-size: 12px;
       line-height: 28px;
       display: inline-block;
       height: 28px;
-      margin: 0;
       padding: 0 15px;
       border-width: 1px;
+    }
+    @include max(425) {
+      margin: 40px 0 0 24px;
     }
   }
 }

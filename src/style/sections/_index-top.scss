@@ -5,9 +5,17 @@
   height: 950px;
   padding-top: 82px;
 
+  @include max(768) {
+    background-image: url('../img/bg-top-circles.png');
+    background-repeat: no-repeat;
+    background-position: 50% calc(100% - 140px);
+  }
   @include max(740) {
     height: 800px;
     padding-top: 43px;
+  }
+  @include max(640) {
+    background-position: 65% calc(100% - 100px);
   }
 }
 
@@ -21,12 +29,15 @@
   @include max(1024) {
     transform: translate(-1457px, -2000px) scale(.92);
   }
-  @include max(740) {
-    transform: translate(-1457px, -2150px) scale(.92);
+  @include max(768) {
+    display: none;
   }
-  @include max(640) {
-    transform: translate(-1700px, -2150px) scale(.92);
-  }
+  //@include max(740) {
+  //  transform: translate(-1457px, -2150px) scale(.92);
+  //}
+  //@include max(640) {
+  //  transform: translate(-1700px, -2150px) scale(.92);
+  //}
 }
 
 .index-top__information {
@@ -84,8 +95,8 @@
     margin-bottom: 24px;
   }
   @include max(767) {
-    margin-top: 40px;
     font-size: 24px;
+    margin-top: 40px;
   }
 }
 

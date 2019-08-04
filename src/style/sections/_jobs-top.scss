@@ -7,12 +7,17 @@
 
   @include max(740) {
     padding-top: 43px;
+    padding-bottom: 40px;
   }
 }
 
 .jobs-top__descr {
   position: relative;
   padding-top: 40px;
+
+  @include max(740) {
+    padding-top: 0;
+  }
   &::before {
     position: absolute;
     bottom: 0;
@@ -38,7 +43,6 @@
     font-size: 33px;
     line-height: 1.2;
   }
-
   @include max(767) {
     font-size: 24px;
   }

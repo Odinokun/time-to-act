@@ -214,8 +214,8 @@
 }
 
 //end footer menu
-//begin footer__language
 
+//begin footer__language
 .footer__language {
   position: relative;
   width: 48px;
@@ -229,7 +229,7 @@
     margin-right: 0;
   }
   @include max(740) {
-    top: -6px;
+    top: 0;
     right: -40px;
   }
   .language {
@@ -363,6 +363,18 @@
     @include max(767) {
       font-size: 14px;
     }
+  }
+}
+
+.footer__right-adress span {
+  @include max(740) {
+    margin-bottom: 0;
+  }
+}
+
+.footer__right-mail span {
+  @include max(740) {
+    margin-top: 20px;
   }
 }
 

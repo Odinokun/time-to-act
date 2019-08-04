@@ -43,24 +43,6 @@
   .path-02 {
     animation: path-02 8s infinite steps(1);
   }
-  .path-03 {
-    animation: path-03 8s infinite steps(1);
-  }
-  .path-04 {
-    animation: path-04 8s infinite steps(1);
-  }
-  .path-05 {
-    animation: path-05 8s infinite steps(1);
-  }
-  .path-06 {
-    animation: path-06 8s infinite steps(1);
-  }
-  .path-07 {
-    animation: path-07 8s infinite steps(1);
-  }
-  .path-08 {
-    animation: path-08 8s infinite steps(1);
-  }
 }
 
 @keyframes preloader {
@@ -100,70 +82,13 @@
   12.5% {
     fill: #fff;
   }
-  87.5% {
-    fill: #ffc107;
-  }
 }
 
 @keyframes path-02 {
   0% {
     fill: #ffc107;
   }
-  25% {
-    fill: #fff;
-  }
-}
-
-@keyframes path-03 {
   12.5% {
-    fill: #ffc107;
-  }
-  37.5% {
-    fill: #fff;
-  }
-}
-
-@keyframes path-04 {
-  25% {
-    fill: #ffc107;
-  }
-  50% {
-    fill: #fff;
-  }
-}
-
-@keyframes path-05 {
-  37.5% {
-    fill: #ffc107;
-  }
-  62.5% {
-    fill: #fff;
-  }
-}
-
-@keyframes path-06 {
-  50% {
-    fill: #ffc107;
-  }
-  75% {
-    fill: #fff;
-  }
-}
-
-@keyframes path-07 {
-  62.5% {
-    fill: #ffc107;
-  }
-  87.5% {
-    fill: #fff;
-  }
-}
-
-@keyframes path-08 {
-  75% {
-    fill: #ffc107;
-  }
-  100% {
     fill: #fff;
   }
 }

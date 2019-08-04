@@ -24,9 +24,6 @@ $(function() {
   // begin Popup
   require('./modules/popup')();
 
-  // begin preloader
-  require('./modules/preloader')();
-
   // begin header
   require('./modules/header')();
 
@@ -44,4 +41,6 @@ $(function() {
   // begin gsap social
   require('./modules/gsap')();
 
+  // begin preloader
+  require('./modules/preloader')();
 });

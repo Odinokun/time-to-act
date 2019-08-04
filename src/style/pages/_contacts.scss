@@ -136,6 +136,10 @@
 .contacts-team {
   padding-top: 90px;
   padding-bottom: 60px;
+  @include max(740) {
+    padding-top: 32px;
+    padding-bottom: 30px;
+  }
 
   .container {
     position: relative;
@@ -275,6 +279,10 @@
 .contacts-socials {
   padding-top: 80px;
   background-color: rgba(187, 222, 251, .9);
+  @include max(740) {
+    padding-bottom: 24px;
+    padding-top: 40px;
+  }
   .contacts-hashtag {
     top: auto;
     bottom: 74px;

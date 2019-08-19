@@ -32,6 +32,9 @@
     @include max(740) {
       margin-top: -80px;
     }
+    @include max(640) {
+      margin-top: -50px;
+    }
     @include max(425) {
       padding: 0 8px;
     }

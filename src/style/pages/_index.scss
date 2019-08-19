@@ -31,5 +31,9 @@
     background-image: url('../img/bg-index.png');
     background-repeat: no-repeat;
     background-position: 0 40px;
+
+    @include max(988) {
+      display: none;
+    }
   }
 }

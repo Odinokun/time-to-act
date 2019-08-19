@@ -9,6 +9,9 @@
     padding-top: 43px;
     padding-bottom: 40px;
   }
+  @include max(640) {
+    z-index: 2;
+  }
 }
 
 .jobs-top__descr {

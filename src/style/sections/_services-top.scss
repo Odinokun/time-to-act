@@ -7,6 +7,9 @@
   @include max(740) {
     padding-top: 43px;
   }
+  @include max(640) {
+    z-index: 2;
+  }
 }
 
 .services-top__descr {

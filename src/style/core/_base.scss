@@ -217,6 +217,10 @@ ol > *:not(li) {
   width: 100%;
   margin: 0 auto;
   padding: 0 27px;
+
+  @include max(640) {
+    z-index: 1;
+  }
 }
 
 .container {
